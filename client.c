@@ -1,22 +1,10 @@
 #include "config.h"
 
-/*UnoCard handGame[HAND] ={
-    {ZERO, BLUE},
-    {TEN, JOKER},
-    {THREE, BLUE},
-    {ONE, GREEN},
-    {NINE, YELLOW},
-    {SEVEN, RED},
-    {ONE, YELLOW},
-    {TWO, BLUE},
-    {FOUR, RED},
-    {NINE, BLUE},
-    {FIVE, GREEN}
-};*/
 
 UnoCard handGame[42];
 int addition;
 UnoCard unoCardFromServer = {-1, -1};
+UnoCard unoCardFromServerPosed = {-1, -1};
 
 char *menu[] = {
 	"Tirer une carte",
@@ -40,6 +28,7 @@ void * listener();
 int y, x;
 int ch;
 char* temp;
+char* removingcard;
 int done = 0;
 ITEM **my_items;
 int c;				
@@ -191,6 +180,8 @@ void * setchoice (int ch)
 				mvprintw(LINES - 10, 0, "Appuyer sur le chiffre correspondant pour executer une action du menu");
 				mvprintw(LINES - 8, 0, "(F1 pour Quitter)");
 				post_menu(my_menu);
+
+				draw_card(unoCardFromServerPosed, 1); 
 				refresh();
         		break;
 
@@ -250,10 +241,7 @@ void * setchoice (int ch)
         	strcat(temp,":");
         	strcat(temp, card2str(handGame[(x - POSFIRSTCARD)/3]));
 			sendWithAck(sock, temp);
-        	/*if(sendWithAck(sock, temp) == 1){
-        		draw_card(unoCardFromServer, 1);  
-        	}*/
-        		
+		
         	break;
         }
     }
@@ -277,8 +265,40 @@ void * listener ()
 				mvprintw(LINES-6 ,0 ,buffer);
 				mvprintw(LINES-5 ,0 ,requete);
 				mvprintw(LINES-4 ,0 ,data);
-				unoCardFromServer = strToUnoCard(data);
-				draw_card(unoCardFromServer, 1);  
+				unoCardFromServerPosed = strToUnoCard(data); 
+				current_hand_to_stash--;
+				remove_element(handGame, (x - POSFIRSTCARD)/3, 42);
+				addition--;
+				
+				clear();
+				n_choices = ARRAY_SIZE(menu);
+				my_items = (ITEM **)calloc(n_choices + 1, sizeof(ITEM *));
+				for(iterator = 0; iterator < n_choices; ++iterator)
+				{       
+					my_items[iterator] = new_item(menu[iterator], menu[iterator]);
+					/* Set the user pointer */
+					set_item_userptr(my_items[iterator], func);
+				}
+				my_items[n_choices] = (ITEM *)NULL;
+				/* Create menu */
+				my_menu = new_menu((ITEM **)my_items);
+				for(int i = 0; i < HAND+addition; i++)
+				{
+					draw_game_card(handGame[i],i);
+				}
+				y = LINES - 2;
+    			x = POSFIRSTCARD;
+				set_menu_fore(my_menu, COLOR_PAIR(RED) | A_REVERSE);
+				set_menu_back(my_menu, COLOR_PAIR(GREEN));
+				set_menu_grey(my_menu, COLOR_PAIR(8));
+				mvprintw(LINES - 10, 0, "Appuyer sur le chiffre correspondant pour executer une action du menu");
+				mvprintw(LINES - 8, 0, "(F1 pour Quitter)");
+				post_menu(my_menu);
+
+
+				draw_card(unoCardFromServerPosed, 1); 
+
+				refresh();
 				break;
 			
 			case 700:
@@ -312,6 +332,9 @@ void * listener ()
 				mvprintw(LINES - 10, 0, "Appuyer sur le chiffre correspondant pour executer une action du menu");
 				mvprintw(LINES - 8, 0, "(F1 pour Quitter)");
 				post_menu(my_menu);
+
+				draw_card(unoCardFromServerPosed, 1); 
+
 				refresh();
 				break;
 		}
@@ -564,3 +587,9 @@ void func(char *name)
 	clrtoeol();
 	mvprintw(20, 0, "Item selectionné : %s", name);
 }	
+
+void remove_element(UnoCard *array, int index, int array_length)
+{
+   int i;
+   for(i = index; i < array_length - 1; i++) array[i] = array[i + 1];
+}
