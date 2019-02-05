@@ -12,10 +12,10 @@
 #include "config.h"
 
 
-UnoCard handGame[42];
-int addition;
-UnoCard unoCardFromServer = {-1, -1};
-UnoCard unoCardFromServerPosed = {-1, -1};
+UnoCard handGame[42];  /*!< Carte en main pour le joueur */
+int addition; /*!< Variable utilisé contenant le nombre de carte en plus que la main initiale (11 cartes au début) */
+UnoCard unoCardFromServer = {-1, -1}; /*!< Récupéré la carte donnée par le serveur */
+UnoCard unoCardFromServerPosed = {-1, -1}; /*!< Récupéré la carte posé sur le paquet nécessaire lorsque l'on va faire un refresh */
 
 /**
  * @brief Menu utilisé pour l'action de tirer une carte ou de quitter
@@ -40,19 +40,19 @@ int sendForCards(int socket, char * msg, int index);
 void * setchoice (int ch);
 void * listener();
 
-int y, x;
-int ch;
-char* temp;
-char* removingcard;
-int done = 0;
-ITEM **my_items;
-int c;				
-MENU *my_menu;
+int y, x; /*!< Ligne et colonne de la fenêtre */
+int ch; /*!< recupération de caractère tapé */
+char* temp; /*!< chaine de caractère pour l'envoie de la requete */
+char* removingcard; /*!< chaine de caractère pour l'envoie de la requete */
+int done = 0; /*!< Variable utilisé pour savoir si on arrête les threads */
+ITEM **my_items; /*!< Item du menu : voir menu.h */
+int c;		/*!< choix dans le menu */		
+MENU *my_menu; /*!< Varibale de menu */
 int n_choices, iterator;
 ITEM *cur_item;
 pthread_mutex_t mutexsum = PTHREAD_MUTEX_INITIALIZER; 
-int sock;
-int current_hand_to_stash = 0;
+int sock; /*!< socket client */
+int current_hand_to_stash = 0; /*!< savoir combien de carte on a en main */
 
 int main(int argc, char const *argv[]){
 
