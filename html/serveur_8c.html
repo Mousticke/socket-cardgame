@@ -70,6 +70,9 @@ $(function() {
 <div class="title">serveur.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>fichier serveur  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -80,14 +83,11 @@ Functions</h2></td></tr>
 <tr class="memitem:aeecd6f58fa6d481195e48a0c33bebbcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#aeecd6f58fa6d481195e48a0c33bebbcf">strToUnoCard</a> (char *str)</td></tr>
 <tr class="memdesc:aeecd6f58fa6d481195e48a0c33bebbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion de la chaine de caractère en UnoCard.  <a href="#aeecd6f58fa6d481195e48a0c33bebbcf">More...</a><br /></td></tr>
 <tr class="separator:aeecd6f58fa6d481195e48a0c33bebbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7cc3806641017bc96af6fd10cabba98"><td class="memItemLeft" align="right" valign="top"><a id="ab7cc3806641017bc96af6fd10cabba98"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>rand_range</b> (int upper_limit)</td></tr>
+<tr class="memitem:ab7cc3806641017bc96af6fd10cabba98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#ab7cc3806641017bc96af6fd10cabba98">rand_range</a> (int upper_limit)</td></tr>
 <tr class="separator:ab7cc3806641017bc96af6fd10cabba98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60de8e2a67fec5a5932b7e3f7f7a0627"><td class="memItemLeft" align="right" valign="top"><a id="a60de8e2a67fec5a5932b7e3f7f7a0627"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>array_contains</b> (int *haystack, int needle, int length)</td></tr>
+<tr class="memitem:a60de8e2a67fec5a5932b7e3f7f7a0627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a60de8e2a67fec5a5932b7e3f7f7a0627">array_contains</a> (int *haystack, int needle, int length)</td></tr>
 <tr class="separator:a60de8e2a67fec5a5932b7e3f7f7a0627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3d154dae81d33a37f0c2ccd890950a1"><td class="memItemLeft" align="right" valign="top"><a id="aa3d154dae81d33a37f0c2ccd890950a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deal_cards</b> (int sd)</td></tr>
+<tr class="memitem:aa3d154dae81d33a37f0c2ccd890950a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#aa3d154dae81d33a37f0c2ccd890950a1">deal_cards</a> (int sd)</td></tr>
 <tr class="separator:aa3d154dae81d33a37f0c2ccd890950a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23270d6ea7fa05081b5dc4be449bbd77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a23270d6ea7fa05081b5dc4be449bbd77">canPlayCard</a> (<a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a> <a class="el" href="client_8c.html#a4e1e0e72dd773439e333c84dd762a9c3">c</a>)</td></tr>
 <tr class="memdesc:a23270d6ea7fa05081b5dc4be449bbd77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifier si l'on peut jouer la carte. La premier carte côté serveur sera considérée comme un joker.  <a href="#a23270d6ea7fa05081b5dc4be449bbd77">More...</a><br /></td></tr>
@@ -101,55 +101,77 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>deal_cards</b> (int s
 <tr class="memitem:a7ba70a83e6a08272d59da184f67bfd81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a7ba70a83e6a08272d59da184f67bfd81">dialogueClt</a> (void *param)</td></tr>
 <tr class="memdesc:a7ba70a83e6a08272d59da184f67bfd81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dialogue avec le client en fonction du code requête passé  <a href="#a7ba70a83e6a08272d59da184f67bfd81">More...</a><br /></td></tr>
 <tr class="separator:a7ba70a83e6a08272d59da184f67bfd81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6b57370ba26cec5971678a65db0cf568"><td class="memItemLeft" align="right" valign="top"><a id="a6b57370ba26cec5971678a65db0cf568"></a>
-<a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currentCard</b></td></tr>
+<tr class="memitem:a6b57370ba26cec5971678a65db0cf568"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a6b57370ba26cec5971678a65db0cf568">currentCard</a></td></tr>
 <tr class="separator:a6b57370ba26cec5971678a65db0cf568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a650165e8f05540195216ab81804a448b"><td class="memItemLeft" align="right" valign="top"><a id="a650165e8f05540195216ab81804a448b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>currentPlayer</b> = -1</td></tr>
+<tr class="memitem:a650165e8f05540195216ab81804a448b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a650165e8f05540195216ab81804a448b">currentPlayer</a> = -1</td></tr>
 <tr class="separator:a650165e8f05540195216ab81804a448b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeb0efc6f4ac143dbbaf3c58b84fce9c"><td class="memItemLeft" align="right" valign="top"><a id="aeeb0efc6f4ac143dbbaf3c58b84fce9c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nbJoueur</b> = 0</td></tr>
+<tr class="memitem:aeeb0efc6f4ac143dbbaf3c58b84fce9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#aeeb0efc6f4ac143dbbaf3c58b84fce9c">nbJoueur</a> = 0</td></tr>
 <tr class="separator:aeeb0efc6f4ac143dbbaf3c58b84fce9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0d46a978d5cd6707411f276ad869b9c"><td class="memItemLeft" align="right" valign="top"><a id="ae0d46a978d5cd6707411f276ad869b9c"></a>
-pid_t&#160;</td><td class="memItemRight" valign="bottom"><b>pid</b></td></tr>
+<tr class="memitem:ae0d46a978d5cd6707411f276ad869b9c"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#ae0d46a978d5cd6707411f276ad869b9c">pid</a></td></tr>
 <tr class="separator:ae0d46a978d5cd6707411f276ad869b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c81cc379af5987d5bd74b1c38197fcf"><td class="memItemLeft" align="right" valign="top"><a id="a4c81cc379af5987d5bd74b1c38197fcf"></a>
-pid_t&#160;</td><td class="memItemRight" valign="bottom"><b>pidR</b></td></tr>
+<tr class="memitem:a4c81cc379af5987d5bd74b1c38197fcf"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a4c81cc379af5987d5bd74b1c38197fcf">pidR</a></td></tr>
 <tr class="separator:a4c81cc379af5987d5bd74b1c38197fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c38adef1c309a145b4179ce607df167"><td class="memItemLeft" align="right" valign="top"><a id="a0c38adef1c309a145b4179ce607df167"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>se</b></td></tr>
+<tr class="memitem:a0c38adef1c309a145b4179ce607df167"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a0c38adef1c309a145b4179ce607df167">se</a></td></tr>
 <tr class="separator:a0c38adef1c309a145b4179ce607df167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d02c72d6285728bfbe3d8dfed12414"><td class="memItemLeft" align="right" valign="top"><a id="a68d02c72d6285728bfbe3d8dfed12414"></a>
-pthread_t&#160;</td><td class="memItemRight" valign="bottom"><b>t_client</b> [5]</td></tr>
+<tr class="memitem:a68d02c72d6285728bfbe3d8dfed12414"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a68d02c72d6285728bfbe3d8dfed12414">t_client</a> [5]</td></tr>
 <tr class="separator:a68d02c72d6285728bfbe3d8dfed12414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f2cb7f4b9db61128c18f70c2d63e194"><td class="memItemLeft" align="right" valign="top"><a id="a6f2cb7f4b9db61128c18f70c2d63e194"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>currentThread</b> = 0</td></tr>
+<tr class="memitem:a6f2cb7f4b9db61128c18f70c2d63e194"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a6f2cb7f4b9db61128c18f70c2d63e194">currentThread</a> = 0</td></tr>
 <tr class="separator:a6f2cb7f4b9db61128c18f70c2d63e194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af00881b46880e824b8a29472991fc0b0"><td class="memItemLeft" align="right" valign="top"><a id="af00881b46880e824b8a29472991fc0b0"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>sending</b></td></tr>
+<tr class="memitem:af00881b46880e824b8a29472991fc0b0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#af00881b46880e824b8a29472991fc0b0">sending</a></td></tr>
 <tr class="separator:af00881b46880e824b8a29472991fc0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31fc7cea3b30f228cab84f8cf75ce3a4"><td class="memItemLeft" align="right" valign="top"><a id="a31fc7cea3b30f228cab84f8cf75ce3a4"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>dealing</b></td></tr>
+<tr class="memitem:a31fc7cea3b30f228cab84f8cf75ce3a4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a31fc7cea3b30f228cab84f8cf75ce3a4">dealing</a></td></tr>
 <tr class="separator:a31fc7cea3b30f228cab84f8cf75ce3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cdc5011eaecfb78f988ec031f0eaeba"><td class="memItemLeft" align="right" valign="top"><a id="a7cdc5011eaecfb78f988ec031f0eaeba"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dataToInt</b></td></tr>
+<tr class="memitem:a7cdc5011eaecfb78f988ec031f0eaeba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a7cdc5011eaecfb78f988ec031f0eaeba">dataToInt</a></td></tr>
 <tr class="separator:a7cdc5011eaecfb78f988ec031f0eaeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0907c0a3783473dc345c0c5151b17acf"><td class="memItemLeft" align="right" valign="top"><a id="a0907c0a3783473dc345c0c5151b17acf"></a>
-<a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a>&#160;</td><td class="memItemRight" valign="bottom"><b>deck</b> []</td></tr>
+<tr class="memitem:a0907c0a3783473dc345c0c5151b17acf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serveur_8c.html#a0907c0a3783473dc345c0c5151b17acf">deck</a> []</td></tr>
 <tr class="separator:a0907c0a3783473dc345c0c5151b17acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Doral - Jbara - Forey </dd></dl>
+<div class="textblock"><p>fichier serveur </p>
+<dl class="section author"><dt>Author</dt><dd>Doral - Jbara - Forey </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2018-12-22</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2018 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a60de8e2a67fec5a5932b7e3f7f7a0627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60de8e2a67fec5a5932b7e3f7f7a0627">&#9670;&nbsp;</a></span>array_contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int array_contains </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>needle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a23270d6ea7fa05081b5dc4be449bbd77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23270d6ea7fa05081b5dc4be449bbd77">&#9670;&nbsp;</a></span>canPlayCard()</h2>
 
@@ -204,6 +226,24 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dataToInt</b></td></tr
 
 </div>
 </div>
+<a id="aa3d154dae81d33a37f0c2ccd890950a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d154dae81d33a37f0c2ccd890950a1">&#9670;&nbsp;</a></span>deal_cards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deal_cards </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a81be438dee731547be81be4ade44c405"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81be438dee731547be81be4ade44c405">&#9670;&nbsp;</a></span>deroute()</h2>
 
@@ -253,6 +293,41 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dataToInt</b></td></tr
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7cc3806641017bc96af6fd10cabba98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7cc3806641017bc96af6fd10cabba98">&#9670;&nbsp;</a></span>rand_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rand_range </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>upper_limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -324,6 +399,175 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dataToInt</b></td></tr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>UnoCard </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6b57370ba26cec5971678a65db0cf568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b57370ba26cec5971678a65db0cf568">&#9670;&nbsp;</a></span>currentCard</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a> currentCard</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a650165e8f05540195216ab81804a448b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650165e8f05540195216ab81804a448b">&#9670;&nbsp;</a></span>currentPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentPlayer = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2cb7f4b9db61128c18f70c2d63e194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2cb7f4b9db61128c18f70c2d63e194">&#9670;&nbsp;</a></span>currentThread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentThread = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cdc5011eaecfb78f988ec031f0eaeba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cdc5011eaecfb78f988ec031f0eaeba">&#9670;&nbsp;</a></span>dataToInt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dataToInt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31fc7cea3b30f228cab84f8cf75ce3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31fc7cea3b30f228cab84f8cf75ce3a4">&#9670;&nbsp;</a></span>dealing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* dealing</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0907c0a3783473dc345c0c5151b17acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0907c0a3783473dc345c0c5151b17acf">&#9670;&nbsp;</a></span>deck</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="config_8h.html#a28cf69211154da10f35f52548900fb99">UnoCard</a> deck[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeeb0efc6f4ac143dbbaf3c58b84fce9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeb0efc6f4ac143dbbaf3c58b84fce9c">&#9670;&nbsp;</a></span>nbJoueur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nbJoueur = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d46a978d5cd6707411f276ad869b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d46a978d5cd6707411f276ad869b9c">&#9670;&nbsp;</a></span>pid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pid_t pid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c81cc379af5987d5bd74b1c38197fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c81cc379af5987d5bd74b1c38197fcf">&#9670;&nbsp;</a></span>pidR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pid_t pidR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c38adef1c309a145b4179ce607df167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c38adef1c309a145b4179ce607df167">&#9670;&nbsp;</a></span>se</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int se</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af00881b46880e824b8a29472991fc0b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00881b46880e824b8a29472991fc0b0">&#9670;&nbsp;</a></span>sending</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* sending</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68d02c72d6285728bfbe3d8dfed12414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d02c72d6285728bfbe3d8dfed12414">&#9670;&nbsp;</a></span>t_client</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t t_client[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

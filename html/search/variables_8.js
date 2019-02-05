@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['unocardfromserver',['unoCardFromServer',['../client_8c.html#acdef5af5ed6fe655c3d9952e9b680138',1,'client.c']]],
-  ['unocardfromserverposed',['unoCardFromServerPosed',['../client_8c.html#a1e568219aaec3afffb2959dab0ca8336',1,'client.c']]]
+  ['pid',['pid',['../serveur_8c.html#ae0d46a978d5cd6707411f276ad869b9c',1,'serveur.c']]],
+  ['pidr',['pidR',['../serveur_8c.html#a4c81cc379af5987d5bd74b1c38197fcf',1,'serveur.c']]]
 ];

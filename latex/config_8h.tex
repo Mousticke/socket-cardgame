@@ -1,5 +1,10 @@
 \hypertarget{config_8h}{}\section{config.\+h File Reference}
 \label{config_8h}\index{config.h@{config.h}}
+
+
+header cnfig  
+
+
 {\ttfamily \#include $<$curses.\+h$>$}\newline
 {\ttfamily \#include $<$unistd.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
@@ -14,7 +19,7 @@
 {\ttfamily \#include $<$pthread.\+h$>$}\newline
 {\ttfamily \#include $<$menu.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
-\subsection*{Classes}
+\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structunocard}{unocard}}
@@ -26,107 +31,73 @@ struct \mbox{\hyperlink{structarg__struct}{arg\+\_\+struct}}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{config_8h_ad3fe337408f16c132c895f2b59326410}\label{config_8h_ad3fe337408f16c132c895f2b59326410}} 
-\#define {\bfseries C\+H\+E\+CK}(sts,  msg)~if ((sts) == -\/1) \{perror(msg);exit(-\/1);\}
+\#define \mbox{\hyperlink{config_8h_ad3fe337408f16c132c895f2b59326410}{C\+H\+E\+CK}}(sts,  msg)~if ((sts) == -\/1) \{perror(msg);exit(-\/1);\}
 \item 
-\mbox{\Hypertarget{config_8h_a04b0e57e7368a2d3e70dc2329c0602f2}\label{config_8h_a04b0e57e7368a2d3e70dc2329c0602f2}} 
-\#define {\bfseries P\+O\+R\+T\+\_\+\+S\+VC}~5000
+\#define \mbox{\hyperlink{config_8h_a04b0e57e7368a2d3e70dc2329c0602f2}{P\+O\+R\+T\+\_\+\+S\+VC}}~5000
 \item 
-\mbox{\Hypertarget{config_8h_a4097e5bea5b8c0dcf3b10bdb74b64a44}\label{config_8h_a4097e5bea5b8c0dcf3b10bdb74b64a44}} 
-\#define {\bfseries I\+N\+A\+D\+D\+R\+\_\+\+S\+VC}~\char`\"{}127.\+0.\+0.\+1\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a4097e5bea5b8c0dcf3b10bdb74b64a44}{I\+N\+A\+D\+D\+R\+\_\+\+S\+VC}}~\char`\"{}127.\+0.\+0.\+1\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a0c719c414608ef14852670b063876c07}\label{config_8h_a0c719c414608ef14852670b063876c07}} 
-\#define {\bfseries M\+SG}~\char`\"{}100\+:Je dis que \textbackslash{}\char`\"{}le fond de l’eau est clair par ici ! Où ça ?\textbackslash{}\char`\"{}\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a0c719c414608ef14852670b063876c07}{M\+SG}}~\char`\"{}100\+:Je dis que \textbackslash{}\char`\"{}le fond de l’eau est clair par ici ! Où ça ?\textbackslash{}\char`\"{}\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a3d91eaf9be1bd362e3779b2667768051}\label{config_8h_a3d91eaf9be1bd362e3779b2667768051}} 
-\#define {\bfseries B\+YE}~\char`\"{}000\+:Au revoir et à bientôt ...\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a3d91eaf9be1bd362e3779b2667768051}{B\+YE}}~\char`\"{}000\+:Au revoir et à bientôt ...\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a6437b6cb0ca9277e188b7da5a66056a2}\label{config_8h_a6437b6cb0ca9277e188b7da5a66056a2}} 
-\#define {\bfseries E\+R\+R\+O\+R\+\_\+\+R\+EQ}~\char`\"{}200\+:Requête ou réponse non reconnue !\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a6437b6cb0ca9277e188b7da5a66056a2}{E\+R\+R\+O\+R\+\_\+\+R\+EQ}}~\char`\"{}200\+:Requête ou réponse non reconnue !\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_aaef1a8195c12eb99a08eb30a1b83b548}\label{config_8h_aaef1a8195c12eb99a08eb30a1b83b548}} 
-\#define {\bfseries S\+OK}~\char`\"{}OK\char`\"{}
+\#define \mbox{\hyperlink{config_8h_aaef1a8195c12eb99a08eb30a1b83b548}{S\+OK}}~\char`\"{}OK\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_aa915e8300da7583ca4d3b00103a7575f}\label{config_8h_aa915e8300da7583ca4d3b00103a7575f}} 
-\#define {\bfseries N\+OK}~\char`\"{}Not OK\char`\"{}
+\#define \mbox{\hyperlink{config_8h_aa915e8300da7583ca4d3b00103a7575f}{N\+OK}}~\char`\"{}Not OK\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}\label{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}} 
-\#define {\bfseries M\+A\+X\+\_\+\+B\+U\+FF}~1024
+\#define \mbox{\hyperlink{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}{M\+A\+X\+\_\+\+B\+U\+FF}}~1024
 \item 
-\mbox{\Hypertarget{config_8h_a022803913146916c632a8d0782cb7dbc}\label{config_8h_a022803913146916c632a8d0782cb7dbc}} 
-\#define {\bfseries N\+B\+\_\+\+C\+A\+R\+T\+ES}~42
+\#define \mbox{\hyperlink{config_8h_a022803913146916c632a8d0782cb7dbc}{N\+B\+\_\+\+C\+A\+R\+T\+ES}}~42
 \item 
-\mbox{\Hypertarget{config_8h_a1c346c944e8204fd06dc057393c7c96d}\label{config_8h_a1c346c944e8204fd06dc057393c7c96d}} 
-\#define {\bfseries M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+RS}~3
+\#define \mbox{\hyperlink{config_8h_a1c346c944e8204fd06dc057393c7c96d}{M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+RS}}~3
 \item 
-\mbox{\Hypertarget{config_8h_ad4d025ecf1bdbf8b244ca688df8e478d}\label{config_8h_ad4d025ecf1bdbf8b244ca688df8e478d}} 
-\#define {\bfseries M\+S\+G\+\_\+\+S\+I\+ZE}~82
+\#define \mbox{\hyperlink{config_8h_ad4d025ecf1bdbf8b244ca688df8e478d}{M\+S\+G\+\_\+\+S\+I\+ZE}}~82
 \item 
-\mbox{\Hypertarget{config_8h_ad88ad40c57d7ae2f97c12e3fe7827e1f}\label{config_8h_ad88ad40c57d7ae2f97c12e3fe7827e1f}} 
-\#define {\bfseries C\+OK}~\char`\"{}OK\char`\"{}
+\#define \mbox{\hyperlink{config_8h_ad88ad40c57d7ae2f97c12e3fe7827e1f}{C\+OK}}~\char`\"{}OK\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a1ed5a3b18f21aa4256c84519ced01cb4}\label{config_8h_a1ed5a3b18f21aa4256c84519ced01cb4}} 
-\#define {\bfseries P\+L\+A\+Y\+C\+A\+RD}~\char`\"{}300\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a1ed5a3b18f21aa4256c84519ced01cb4}{P\+L\+A\+Y\+C\+A\+RD}}~\char`\"{}300\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a78dd09631b1c6499c22f21eac4d9c0e4}\label{config_8h_a78dd09631b1c6499c22f21eac4d9c0e4}} 
-\#define {\bfseries P\+R\+I\+N\+T\+C\+A\+RD}~\char`\"{}500\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a78dd09631b1c6499c22f21eac4d9c0e4}{P\+R\+I\+N\+T\+C\+A\+RD}}~\char`\"{}500\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a8c92b3addd136c31e32ea2e5a4e6de15}\label{config_8h_a8c92b3addd136c31e32ea2e5a4e6de15}} 
-\#define {\bfseries D\+E\+A\+L\+I\+N\+G\+C\+A\+RD}~\char`\"{}700\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a8c92b3addd136c31e32ea2e5a4e6de15}{D\+E\+A\+L\+I\+N\+G\+C\+A\+RD}}~\char`\"{}700\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a47a39511433a81fcd92e49176a4be518}\label{config_8h_a47a39511433a81fcd92e49176a4be518}} 
-\#define {\bfseries D\+R\+A\+W\+C\+A\+R\+D\+F\+R\+O\+M\+S\+E\+R\+V\+ER}~\char`\"{}800\char`\"{}
+\#define \mbox{\hyperlink{config_8h_a47a39511433a81fcd92e49176a4be518}{D\+R\+A\+W\+C\+A\+R\+D\+F\+R\+O\+M\+S\+E\+R\+V\+ER}}~\char`\"{}800\char`\"{}
 \item 
-\mbox{\Hypertarget{config_8h_a412c778582fa88e4c62776a99930b6e7}\label{config_8h_a412c778582fa88e4c62776a99930b6e7}} 
-\#define {\bfseries K\+E\+Y\+\_\+\+E\+N\+T\+E\+R\+\_\+\+C\+U\+S\+T\+OM}~10
+\#define \mbox{\hyperlink{config_8h_a412c778582fa88e4c62776a99930b6e7}{K\+E\+Y\+\_\+\+E\+N\+T\+E\+R\+\_\+\+C\+U\+S\+T\+OM}}~10
 \item 
-\mbox{\Hypertarget{config_8h_a2b7cf2a3641be7b89138615764d60ba3}\label{config_8h_a2b7cf2a3641be7b89138615764d60ba3}} 
-\#define {\bfseries E\+M\+P\+TY}~\textquotesingle{} \textquotesingle{}
+\#define \mbox{\hyperlink{config_8h_a2b7cf2a3641be7b89138615764d60ba3}{E\+M\+P\+TY}}~\textquotesingle{} \textquotesingle{}
 \item 
-\mbox{\Hypertarget{config_8h_a87b537f5fa5c109d3c05c13d6b18f382}\label{config_8h_a87b537f5fa5c109d3c05c13d6b18f382}} 
-\#define {\bfseries W\+H\+I\+TE}~5
+\#define \mbox{\hyperlink{config_8h_a87b537f5fa5c109d3c05c13d6b18f382}{W\+H\+I\+TE}}~5
 \item 
-\mbox{\Hypertarget{config_8h_a7b3b25cba33b07c303f3060fe41887f6}\label{config_8h_a7b3b25cba33b07c303f3060fe41887f6}} 
-\#define {\bfseries B\+L\+A\+CK}~6
+\#define \mbox{\hyperlink{config_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\+L\+A\+CK}}~6
 \item 
-\mbox{\Hypertarget{config_8h_aef72fe86b7c60b1a86920496456edeac}\label{config_8h_aef72fe86b7c60b1a86920496456edeac}} 
-\#define {\bfseries W\+A\+IT}~0
+\#define \mbox{\hyperlink{config_8h_aef72fe86b7c60b1a86920496456edeac}{W\+A\+IT}}~0
 \item 
-\mbox{\Hypertarget{config_8h_acc47e9180a9dc8aafbd10fe6cfb8e336}\label{config_8h_acc47e9180a9dc8aafbd10fe6cfb8e336}} 
-\#define {\bfseries R\+E\+F\+U\+SE}~1
+\#define \mbox{\hyperlink{config_8h_acc47e9180a9dc8aafbd10fe6cfb8e336}{R\+E\+F\+U\+SE}}~1
 \item 
-\mbox{\Hypertarget{config_8h_a44ad8d0e0924a99b99a5a6a1aa776c33}\label{config_8h_a44ad8d0e0924a99b99a5a6a1aa776c33}} 
-\#define {\bfseries D\+E\+AL}~4
+\#define \mbox{\hyperlink{config_8h_a44ad8d0e0924a99b99a5a6a1aa776c33}{D\+E\+AL}}~4
 \item 
-\mbox{\Hypertarget{config_8h_a5e1a9330a996857d164653e4aba8fbfb}\label{config_8h_a5e1a9330a996857d164653e4aba8fbfb}} 
-\#define {\bfseries A\+SK}~5
+\#define \mbox{\hyperlink{config_8h_a5e1a9330a996857d164653e4aba8fbfb}{A\+SK}}~5
 \item 
-\mbox{\Hypertarget{config_8h_abf70a4804c459727975816dd16613d45}\label{config_8h_abf70a4804c459727975816dd16613d45}} 
-\#define {\bfseries G\+I\+VE}~7
+\#define \mbox{\hyperlink{config_8h_abf70a4804c459727975816dd16613d45}{G\+I\+VE}}~7
 \item 
-\mbox{\Hypertarget{config_8h_af144c56be720021d0c3a8075b87ff9b5}\label{config_8h_af144c56be720021d0c3a8075b87ff9b5}} 
-\#define {\bfseries R\+O\+U\+ND}~9
+\#define \mbox{\hyperlink{config_8h_af144c56be720021d0c3a8075b87ff9b5}{R\+O\+U\+ND}}~9
 \item 
-\mbox{\Hypertarget{config_8h_adc5ff46918e62c92962966a7ad4d2876}\label{config_8h_adc5ff46918e62c92962966a7ad4d2876}} 
-\#define {\bfseries S\+C\+O\+R\+ES}~11
+\#define \mbox{\hyperlink{config_8h_adc5ff46918e62c92962966a7ad4d2876}{S\+C\+O\+R\+ES}}~11
 \item 
-\mbox{\Hypertarget{config_8h_a148665c75ac246648923b90119015f88}\label{config_8h_a148665c75ac246648923b90119015f88}} 
-\#define {\bfseries W\+I\+N\+N\+ER}~12
+\#define \mbox{\hyperlink{config_8h_a148665c75ac246648923b90119015f88}{W\+I\+N\+N\+ER}}~12
 \item 
-\mbox{\Hypertarget{config_8h_acb08fa4e2bff6fe429d5f0a5e23ec5e4}\label{config_8h_acb08fa4e2bff6fe429d5f0a5e23ec5e4}} 
-\#define {\bfseries M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+C\+O\+L\+OR}~10
+\#define \mbox{\hyperlink{config_8h_acb08fa4e2bff6fe429d5f0a5e23ec5e4}{M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+C\+O\+L\+OR}}~10
 \item 
-\mbox{\Hypertarget{config_8h_a7a703399b5347ebfb53d0507f184f1ff}\label{config_8h_a7a703399b5347ebfb53d0507f184f1ff}} 
-\#define {\bfseries P\+O\+S\+F\+I\+R\+S\+T\+C\+A\+RD}~10
+\#define \mbox{\hyperlink{config_8h_a7a703399b5347ebfb53d0507f184f1ff}{P\+O\+S\+F\+I\+R\+S\+T\+C\+A\+RD}}~10
 \item 
-\mbox{\Hypertarget{config_8h_a701f28a9a2b5334b58333f06e27ad91f}\label{config_8h_a701f28a9a2b5334b58333f06e27ad91f}} 
-\#define {\bfseries H\+A\+ND}~11
+\#define \mbox{\hyperlink{config_8h_a701f28a9a2b5334b58333f06e27ad91f}{H\+A\+ND}}~11
 \item 
-\mbox{\Hypertarget{config_8h_a25f003de16c08a4888b69f619d70f427}\label{config_8h_a25f003de16c08a4888b69f619d70f427}} 
-\#define {\bfseries A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}(a)~(sizeof(a) / sizeof(a\mbox{[}0\mbox{]}))
+\#define \mbox{\hyperlink{config_8h_a25f003de16c08a4888b69f619d70f427}{A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}}(a)~(sizeof(a) / sizeof(a\mbox{[}0\mbox{]}))
 \item 
-\mbox{\Hypertarget{config_8h_a66c7984dbe4ba8f39e6f94fbd0a58a00}\label{config_8h_a66c7984dbe4ba8f39e6f94fbd0a58a00}} 
-\#define {\bfseries C\+T\+R\+LD}~4
+\#define \mbox{\hyperlink{config_8h_a66c7984dbe4ba8f39e6f94fbd0a58a00}{C\+T\+R\+LD}}~4
 \end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -137,35 +108,34 @@ typedef enum \mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332}{face}
 \begin{DoxyCompactList}\small\item\em Définition de enum face en tant que Face. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{structunocard}{unocard}} \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}
 \begin{DoxyCompactList}\small\item\em Définition de la struct unocard en tant que Uno\+Card. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{config_8h_a6d302e4f26f3f380746fece198c1c71a}\label{config_8h_a6d302e4f26f3f380746fece198c1c71a}} 
-typedef struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} {\bfseries t\+\_\+frame}
+typedef struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} \mbox{\hyperlink{config_8h_a6d302e4f26f3f380746fece198c1c71a}{t\+\_\+frame}}
 \end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8f}{color}} \{ \newline
-{\bfseries B\+L\+UE}, 
-{\bfseries Y\+E\+L\+L\+OW}, 
-{\bfseries G\+R\+E\+EN}, 
-{\bfseries R\+ED}, 
+\mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8fa35d6719cb4d7577c031b3d79057a1b79}{B\+L\+UE}}, 
+\mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8fae735a848bf82163a19236ead1c3ef2d2}{Y\+E\+L\+L\+OW}}, 
+\mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8faa60bd322f93178d68184e30e162571ca}{G\+R\+E\+EN}}, 
+\mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}{R\+ED}}, 
 \newline
-{\bfseries J\+O\+K\+ER}
+\mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8fa25612061aa87087bb8b5de724fa71740}{J\+O\+K\+ER}}
  \}
 \begin{DoxyCompactList}\small\item\em Définition de la couleur des cartes. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332}{face}} \{ \newline
-{\bfseries Z\+E\+RO}, 
-{\bfseries O\+NE}, 
-{\bfseries T\+WO}, 
-{\bfseries T\+H\+R\+EE}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332ae117e3533122c80b262257b49b21cddf}{Z\+E\+RO}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a7a725f13af144bdef532d0389ba75e0d}{O\+NE}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a0e793500a63ffa575b9b712ca3bc9851}{T\+WO}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a1251fbf93888ad32fe0ae54d49bcef17}{T\+H\+R\+EE}}, 
 \newline
-{\bfseries F\+O\+UR}, 
-{\bfseries F\+I\+VE}, 
-{\bfseries S\+IX}, 
-{\bfseries S\+E\+V\+EN}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a23d7ef5341c6930d19b2ecbb997977cf}{F\+O\+UR}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a3a40d11d30db182ab8f9846aa9458bec}{F\+I\+VE}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332aadffddd32c3e7497e32cd7e430c9c106}{S\+IX}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a9a193f3e84352f3fbbe44f8d275a820c}{S\+E\+V\+EN}}, 
 \newline
-{\bfseries E\+I\+G\+HT}, 
-{\bfseries N\+I\+NE}, 
-{\bfseries T\+EN}
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a2fd39b67b424f4ea3b4c11ce3195ab8b}{E\+I\+G\+HT}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332aea09d09b793ccc4a4b5983368d18a4ab}{N\+I\+NE}}, 
+\mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332a19e6aa533738c43fc96e8be6560bf1a8}{T\+EN}}
  \}
 \begin{DoxyCompactList}\small\item\em Définition des faces des cartes où T\+EN sera le joker. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -173,14 +143,11 @@ enum \mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332}{face}} \{ \ne
 \item 
 void \mbox{\hyperlink{config_8h_a9ee88fbe9b9433783cd551f4f080bf96}{print\+Card}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$\mbox{\hyperlink{structunocard}{unocard}})
 \begin{DoxyCompactList}\small\item\em Affichage des cartes côté serveur. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{config_8h_a8c28944af99e5b9378e12dcfe3e82733}\label{config_8h_a8c28944af99e5b9378e12dcfe3e82733}} 
-void {\bfseries shuffle\+Card} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$\mbox{\hyperlink{structunocard}{unocard}})
+void \mbox{\hyperlink{config_8h_a8c28944af99e5b9378e12dcfe3e82733}{shuffle\+Card}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$\mbox{\hyperlink{structunocard}{unocard}})
 \item 
-\mbox{\Hypertarget{config_8h_a7e6e6f2eab8196a09f094505c2c108e0}\label{config_8h_a7e6e6f2eab8196a09f094505c2c108e0}} 
-char $\ast$ {\bfseries req2str} (struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} a)
+char $\ast$ \mbox{\hyperlink{config_8h_a7e6e6f2eab8196a09f094505c2c108e0}{req2str}} (struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} a)
 \item 
-\mbox{\Hypertarget{config_8h_af81353074d2d06b2bd87eb6e83bc3cd4}\label{config_8h_af81353074d2d06b2bd87eb6e83bc3cd4}} 
-struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} {\bfseries str2req} (char $\ast$str)
+struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} \mbox{\hyperlink{config_8h_af81353074d2d06b2bd87eb6e83bc3cd4}{str2req}} (char $\ast$str)
 \item 
 void \mbox{\hyperlink{config_8h_ae4f3f9ada6d59ea5dec501237ddada3a}{send\+\_\+msg}} (int msg\+\_\+code, const char $\ast$payload, int socket)
 \begin{DoxyCompactList}\small\item\em préparation d\textquotesingle{}un envoie d\textquotesingle{}un message du serveur vers le client \end{DoxyCompactList}\item 
@@ -191,12 +158,13 @@ void \mbox{\hyperlink{config_8h_a4a23d5c2a00869e7a0bc8c054971fa63}{shuffle}} (\m
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{config_8h_a45fb41f91440f32013a0bdd2be4fc4dd}\label{config_8h_a45fb41f91440f32013a0bdd2be4fc4dd}} 
-char {\bfseries buffer} \mbox{[}M\+A\+X\+\_\+\+B\+U\+FF\mbox{]}
+char \mbox{\hyperlink{config_8h_a45fb41f91440f32013a0bdd2be4fc4dd}{buffer}} \mbox{[}\mbox{\hyperlink{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}{M\+A\+X\+\_\+\+B\+U\+FF}}\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+header cnfig 
+
 \begin{DoxyAuthor}{Author}
 Doral -\/ Jbara -\/ Forey 
 \end{DoxyAuthor}
@@ -209,6 +177,213 @@ Doral -\/ Jbara -\/ Forey
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2018 
 \end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{config_8h_a25f003de16c08a4888b69f619d70f427}\label{config_8h_a25f003de16c08a4888b69f619d70f427}} 
+\index{config.h@{config.h}!ARRAY\_SIZE@{ARRAY\_SIZE}}
+\index{ARRAY\_SIZE@{ARRAY\_SIZE}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{ARRAY\_SIZE}{ARRAY\_SIZE}}
+{\footnotesize\ttfamily \#define A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~(sizeof(a) / sizeof(a\mbox{[}0\mbox{]}))}
+
+\mbox{\Hypertarget{config_8h_a5e1a9330a996857d164653e4aba8fbfb}\label{config_8h_a5e1a9330a996857d164653e4aba8fbfb}} 
+\index{config.h@{config.h}!ASK@{ASK}}
+\index{ASK@{ASK}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{ASK}{ASK}}
+{\footnotesize\ttfamily \#define A\+SK~5}
+
+\mbox{\Hypertarget{config_8h_a7b3b25cba33b07c303f3060fe41887f6}\label{config_8h_a7b3b25cba33b07c303f3060fe41887f6}} 
+\index{config.h@{config.h}!BLACK@{BLACK}}
+\index{BLACK@{BLACK}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{BLACK}{BLACK}}
+{\footnotesize\ttfamily \#define B\+L\+A\+CK~6}
+
+\mbox{\Hypertarget{config_8h_a3d91eaf9be1bd362e3779b2667768051}\label{config_8h_a3d91eaf9be1bd362e3779b2667768051}} 
+\index{config.h@{config.h}!BYE@{BYE}}
+\index{BYE@{BYE}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{BYE}{BYE}}
+{\footnotesize\ttfamily \#define B\+YE~\char`\"{}000\+:Au revoir et à bientôt ...\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_ad3fe337408f16c132c895f2b59326410}\label{config_8h_ad3fe337408f16c132c895f2b59326410}} 
+\index{config.h@{config.h}!CHECK@{CHECK}}
+\index{CHECK@{CHECK}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{CHECK}{CHECK}}
+{\footnotesize\ttfamily \#define C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{sts,  }\item[{}]{msg }\end{DoxyParamCaption})~if ((sts) == -\/1) \{perror(msg);exit(-\/1);\}}
+
+\mbox{\Hypertarget{config_8h_ad88ad40c57d7ae2f97c12e3fe7827e1f}\label{config_8h_ad88ad40c57d7ae2f97c12e3fe7827e1f}} 
+\index{config.h@{config.h}!COK@{COK}}
+\index{COK@{COK}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{COK}{COK}}
+{\footnotesize\ttfamily \#define C\+OK~\char`\"{}OK\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_a66c7984dbe4ba8f39e6f94fbd0a58a00}\label{config_8h_a66c7984dbe4ba8f39e6f94fbd0a58a00}} 
+\index{config.h@{config.h}!CTRLD@{CTRLD}}
+\index{CTRLD@{CTRLD}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{CTRLD}{CTRLD}}
+{\footnotesize\ttfamily \#define C\+T\+R\+LD~4}
+
+\mbox{\Hypertarget{config_8h_a44ad8d0e0924a99b99a5a6a1aa776c33}\label{config_8h_a44ad8d0e0924a99b99a5a6a1aa776c33}} 
+\index{config.h@{config.h}!DEAL@{DEAL}}
+\index{DEAL@{DEAL}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{DEAL}{DEAL}}
+{\footnotesize\ttfamily \#define D\+E\+AL~4}
+
+\mbox{\Hypertarget{config_8h_a8c92b3addd136c31e32ea2e5a4e6de15}\label{config_8h_a8c92b3addd136c31e32ea2e5a4e6de15}} 
+\index{config.h@{config.h}!DEALINGCARD@{DEALINGCARD}}
+\index{DEALINGCARD@{DEALINGCARD}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{DEALINGCARD}{DEALINGCARD}}
+{\footnotesize\ttfamily \#define D\+E\+A\+L\+I\+N\+G\+C\+A\+RD~\char`\"{}700\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_a47a39511433a81fcd92e49176a4be518}\label{config_8h_a47a39511433a81fcd92e49176a4be518}} 
+\index{config.h@{config.h}!DRAWCARDFROMSERVER@{DRAWCARDFROMSERVER}}
+\index{DRAWCARDFROMSERVER@{DRAWCARDFROMSERVER}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{DRAWCARDFROMSERVER}{DRAWCARDFROMSERVER}}
+{\footnotesize\ttfamily \#define D\+R\+A\+W\+C\+A\+R\+D\+F\+R\+O\+M\+S\+E\+R\+V\+ER~\char`\"{}800\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_a2b7cf2a3641be7b89138615764d60ba3}\label{config_8h_a2b7cf2a3641be7b89138615764d60ba3}} 
+\index{config.h@{config.h}!EMPTY@{EMPTY}}
+\index{EMPTY@{EMPTY}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{EMPTY}{EMPTY}}
+{\footnotesize\ttfamily \#define E\+M\+P\+TY~\textquotesingle{} \textquotesingle{}}
+
+\mbox{\Hypertarget{config_8h_a6437b6cb0ca9277e188b7da5a66056a2}\label{config_8h_a6437b6cb0ca9277e188b7da5a66056a2}} 
+\index{config.h@{config.h}!ERROR\_REQ@{ERROR\_REQ}}
+\index{ERROR\_REQ@{ERROR\_REQ}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{ERROR\_REQ}{ERROR\_REQ}}
+{\footnotesize\ttfamily \#define E\+R\+R\+O\+R\+\_\+\+R\+EQ~\char`\"{}200\+:Requête ou réponse non reconnue !\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_abf70a4804c459727975816dd16613d45}\label{config_8h_abf70a4804c459727975816dd16613d45}} 
+\index{config.h@{config.h}!GIVE@{GIVE}}
+\index{GIVE@{GIVE}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{GIVE}{GIVE}}
+{\footnotesize\ttfamily \#define G\+I\+VE~7}
+
+\mbox{\Hypertarget{config_8h_a701f28a9a2b5334b58333f06e27ad91f}\label{config_8h_a701f28a9a2b5334b58333f06e27ad91f}} 
+\index{config.h@{config.h}!HAND@{HAND}}
+\index{HAND@{HAND}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{HAND}{HAND}}
+{\footnotesize\ttfamily \#define H\+A\+ND~11}
+
+\mbox{\Hypertarget{config_8h_a4097e5bea5b8c0dcf3b10bdb74b64a44}\label{config_8h_a4097e5bea5b8c0dcf3b10bdb74b64a44}} 
+\index{config.h@{config.h}!INADDR\_SVC@{INADDR\_SVC}}
+\index{INADDR\_SVC@{INADDR\_SVC}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{INADDR\_SVC}{INADDR\_SVC}}
+{\footnotesize\ttfamily \#define I\+N\+A\+D\+D\+R\+\_\+\+S\+VC~\char`\"{}127.\+0.\+0.\+1\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_a412c778582fa88e4c62776a99930b6e7}\label{config_8h_a412c778582fa88e4c62776a99930b6e7}} 
+\index{config.h@{config.h}!KEY\_ENTER\_CUSTOM@{KEY\_ENTER\_CUSTOM}}
+\index{KEY\_ENTER\_CUSTOM@{KEY\_ENTER\_CUSTOM}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{KEY\_ENTER\_CUSTOM}{KEY\_ENTER\_CUSTOM}}
+{\footnotesize\ttfamily \#define K\+E\+Y\+\_\+\+E\+N\+T\+E\+R\+\_\+\+C\+U\+S\+T\+OM~10}
+
+\mbox{\Hypertarget{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}\label{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}} 
+\index{config.h@{config.h}!MAX\_BUFF@{MAX\_BUFF}}
+\index{MAX\_BUFF@{MAX\_BUFF}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{MAX\_BUFF}{MAX\_BUFF}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+B\+U\+FF~1024}
+
+\mbox{\Hypertarget{config_8h_a1c346c944e8204fd06dc057393c7c96d}\label{config_8h_a1c346c944e8204fd06dc057393c7c96d}} 
+\index{config.h@{config.h}!MAX\_PLAYERS@{MAX\_PLAYERS}}
+\index{MAX\_PLAYERS@{MAX\_PLAYERS}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{MAX\_PLAYERS}{MAX\_PLAYERS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+RS~3}
+
+\mbox{\Hypertarget{config_8h_a0c719c414608ef14852670b063876c07}\label{config_8h_a0c719c414608ef14852670b063876c07}} 
+\index{config.h@{config.h}!MSG@{MSG}}
+\index{MSG@{MSG}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{MSG}{MSG}}
+{\footnotesize\ttfamily \#define M\+SG~\char`\"{}100\+:Je dis que \textbackslash{}\char`\"{}le fond de l’eau est clair par ici ! Où ça ?\textbackslash{}\char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_ad4d025ecf1bdbf8b244ca688df8e478d}\label{config_8h_ad4d025ecf1bdbf8b244ca688df8e478d}} 
+\index{config.h@{config.h}!MSG\_SIZE@{MSG\_SIZE}}
+\index{MSG\_SIZE@{MSG\_SIZE}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{MSG\_SIZE}{MSG\_SIZE}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+S\+I\+ZE~82}
+
+\mbox{\Hypertarget{config_8h_acb08fa4e2bff6fe429d5f0a5e23ec5e4}\label{config_8h_acb08fa4e2bff6fe429d5f0a5e23ec5e4}} 
+\index{config.h@{config.h}!MULTIPLE\_COLOR@{MULTIPLE\_COLOR}}
+\index{MULTIPLE\_COLOR@{MULTIPLE\_COLOR}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{MULTIPLE\_COLOR}{MULTIPLE\_COLOR}}
+{\footnotesize\ttfamily \#define M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+C\+O\+L\+OR~10}
+
+\mbox{\Hypertarget{config_8h_a022803913146916c632a8d0782cb7dbc}\label{config_8h_a022803913146916c632a8d0782cb7dbc}} 
+\index{config.h@{config.h}!NB\_CARTES@{NB\_CARTES}}
+\index{NB\_CARTES@{NB\_CARTES}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{NB\_CARTES}{NB\_CARTES}}
+{\footnotesize\ttfamily \#define N\+B\+\_\+\+C\+A\+R\+T\+ES~42}
+
+\mbox{\Hypertarget{config_8h_aa915e8300da7583ca4d3b00103a7575f}\label{config_8h_aa915e8300da7583ca4d3b00103a7575f}} 
+\index{config.h@{config.h}!NOK@{NOK}}
+\index{NOK@{NOK}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{NOK}{NOK}}
+{\footnotesize\ttfamily \#define N\+OK~\char`\"{}Not OK\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_a1ed5a3b18f21aa4256c84519ced01cb4}\label{config_8h_a1ed5a3b18f21aa4256c84519ced01cb4}} 
+\index{config.h@{config.h}!PLAYCARD@{PLAYCARD}}
+\index{PLAYCARD@{PLAYCARD}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{PLAYCARD}{PLAYCARD}}
+{\footnotesize\ttfamily \#define P\+L\+A\+Y\+C\+A\+RD~\char`\"{}300\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_a04b0e57e7368a2d3e70dc2329c0602f2}\label{config_8h_a04b0e57e7368a2d3e70dc2329c0602f2}} 
+\index{config.h@{config.h}!PORT\_SVC@{PORT\_SVC}}
+\index{PORT\_SVC@{PORT\_SVC}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{PORT\_SVC}{PORT\_SVC}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+S\+VC~5000}
+
+\mbox{\Hypertarget{config_8h_a7a703399b5347ebfb53d0507f184f1ff}\label{config_8h_a7a703399b5347ebfb53d0507f184f1ff}} 
+\index{config.h@{config.h}!POSFIRSTCARD@{POSFIRSTCARD}}
+\index{POSFIRSTCARD@{POSFIRSTCARD}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{POSFIRSTCARD}{POSFIRSTCARD}}
+{\footnotesize\ttfamily \#define P\+O\+S\+F\+I\+R\+S\+T\+C\+A\+RD~10}
+
+\mbox{\Hypertarget{config_8h_a78dd09631b1c6499c22f21eac4d9c0e4}\label{config_8h_a78dd09631b1c6499c22f21eac4d9c0e4}} 
+\index{config.h@{config.h}!PRINTCARD@{PRINTCARD}}
+\index{PRINTCARD@{PRINTCARD}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{PRINTCARD}{PRINTCARD}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+C\+A\+RD~\char`\"{}500\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_acc47e9180a9dc8aafbd10fe6cfb8e336}\label{config_8h_acc47e9180a9dc8aafbd10fe6cfb8e336}} 
+\index{config.h@{config.h}!REFUSE@{REFUSE}}
+\index{REFUSE@{REFUSE}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{REFUSE}{REFUSE}}
+{\footnotesize\ttfamily \#define R\+E\+F\+U\+SE~1}
+
+\mbox{\Hypertarget{config_8h_af144c56be720021d0c3a8075b87ff9b5}\label{config_8h_af144c56be720021d0c3a8075b87ff9b5}} 
+\index{config.h@{config.h}!ROUND@{ROUND}}
+\index{ROUND@{ROUND}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{ROUND}{ROUND}}
+{\footnotesize\ttfamily \#define R\+O\+U\+ND~9}
+
+\mbox{\Hypertarget{config_8h_adc5ff46918e62c92962966a7ad4d2876}\label{config_8h_adc5ff46918e62c92962966a7ad4d2876}} 
+\index{config.h@{config.h}!SCORES@{SCORES}}
+\index{SCORES@{SCORES}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{SCORES}{SCORES}}
+{\footnotesize\ttfamily \#define S\+C\+O\+R\+ES~11}
+
+\mbox{\Hypertarget{config_8h_aaef1a8195c12eb99a08eb30a1b83b548}\label{config_8h_aaef1a8195c12eb99a08eb30a1b83b548}} 
+\index{config.h@{config.h}!SOK@{SOK}}
+\index{SOK@{SOK}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{SOK}{SOK}}
+{\footnotesize\ttfamily \#define S\+OK~\char`\"{}OK\char`\"{}}
+
+\mbox{\Hypertarget{config_8h_aef72fe86b7c60b1a86920496456edeac}\label{config_8h_aef72fe86b7c60b1a86920496456edeac}} 
+\index{config.h@{config.h}!WAIT@{WAIT}}
+\index{WAIT@{WAIT}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{WAIT}{WAIT}}
+{\footnotesize\ttfamily \#define W\+A\+IT~0}
+
+\mbox{\Hypertarget{config_8h_a87b537f5fa5c109d3c05c13d6b18f382}\label{config_8h_a87b537f5fa5c109d3c05c13d6b18f382}} 
+\index{config.h@{config.h}!WHITE@{WHITE}}
+\index{WHITE@{WHITE}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{WHITE}{WHITE}}
+{\footnotesize\ttfamily \#define W\+H\+I\+TE~5}
+
+\mbox{\Hypertarget{config_8h_a148665c75ac246648923b90119015f88}\label{config_8h_a148665c75ac246648923b90119015f88}} 
+\index{config.h@{config.h}!WINNER@{WINNER}}
+\index{WINNER@{WINNER}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{WINNER}{WINNER}}
+{\footnotesize\ttfamily \#define W\+I\+N\+N\+ER~12}
+
 
 
 \subsection{Typedef Documentation}
@@ -231,6 +406,12 @@ Définir enum color en tant que Color.
 
 
 Définition de enum face en tant que Face. 
+
+\mbox{\Hypertarget{config_8h_a6d302e4f26f3f380746fece198c1c71a}\label{config_8h_a6d302e4f26f3f380746fece198c1c71a}} 
+\index{config.h@{config.h}!t\_frame@{t\_frame}}
+\index{t\_frame@{t\_frame}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{t\_frame}{t\_frame}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} \mbox{\hyperlink{structt__frame}{t\+\_\+frame}}}
 
 \mbox{\Hypertarget{config_8h_a28cf69211154da10f35f52548900fb99}\label{config_8h_a28cf69211154da10f35f52548900fb99}} 
 \index{config.h@{config.h}!UnoCard@{UnoCard}}
@@ -255,6 +436,28 @@ Définition de la struct unocard en tant que Uno\+Card.
 
 Définition de la couleur des cartes. 
 
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLUE@{BLUE}!config.h@{config.h}}\index{config.h@{config.h}!BLUE@{BLUE}}}\mbox{\Hypertarget{config_8h_a37dbdc30935031c05304482e1be89d8fa35d6719cb4d7577c031b3d79057a1b79}\label{config_8h_a37dbdc30935031c05304482e1be89d8fa35d6719cb4d7577c031b3d79057a1b79}} 
+B\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YELLOW@{YELLOW}!config.h@{config.h}}\index{config.h@{config.h}!YELLOW@{YELLOW}}}\mbox{\Hypertarget{config_8h_a37dbdc30935031c05304482e1be89d8fae735a848bf82163a19236ead1c3ef2d2}\label{config_8h_a37dbdc30935031c05304482e1be89d8fae735a848bf82163a19236ead1c3ef2d2}} 
+Y\+E\+L\+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GREEN@{GREEN}!config.h@{config.h}}\index{config.h@{config.h}!GREEN@{GREEN}}}\mbox{\Hypertarget{config_8h_a37dbdc30935031c05304482e1be89d8faa60bd322f93178d68184e30e162571ca}\label{config_8h_a37dbdc30935031c05304482e1be89d8faa60bd322f93178d68184e30e162571ca}} 
+G\+R\+E\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RED@{RED}!config.h@{config.h}}\index{config.h@{config.h}!RED@{RED}}}\mbox{\Hypertarget{config_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}\label{config_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}} 
+R\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JOKER@{JOKER}!config.h@{config.h}}\index{config.h@{config.h}!JOKER@{JOKER}}}\mbox{\Hypertarget{config_8h_a37dbdc30935031c05304482e1be89d8fa25612061aa87087bb8b5de724fa71740}\label{config_8h_a37dbdc30935031c05304482e1be89d8fa25612061aa87087bb8b5de724fa71740}} 
+J\+O\+K\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
 \mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332}\label{config_8h_abefeac42acb2cd277c8f6484c742e332}} 
 \index{config.h@{config.h}!face@{face}}
 \index{face@{face}!config.h@{config.h}}
@@ -265,6 +468,52 @@ Définition de la couleur des cartes.
 
 Définition des faces des cartes où T\+EN sera le joker. 
 
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZERO@{ZERO}!config.h@{config.h}}\index{config.h@{config.h}!ZERO@{ZERO}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332ae117e3533122c80b262257b49b21cddf}\label{config_8h_abefeac42acb2cd277c8f6484c742e332ae117e3533122c80b262257b49b21cddf}} 
+Z\+E\+RO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE@{ONE}!config.h@{config.h}}\index{config.h@{config.h}!ONE@{ONE}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a7a725f13af144bdef532d0389ba75e0d}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a7a725f13af144bdef532d0389ba75e0d}} 
+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO@{TWO}!config.h@{config.h}}\index{config.h@{config.h}!TWO@{TWO}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a0e793500a63ffa575b9b712ca3bc9851}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a0e793500a63ffa575b9b712ca3bc9851}} 
+T\+WO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THREE@{THREE}!config.h@{config.h}}\index{config.h@{config.h}!THREE@{THREE}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a1251fbf93888ad32fe0ae54d49bcef17}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a1251fbf93888ad32fe0ae54d49bcef17}} 
+T\+H\+R\+EE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOUR@{FOUR}!config.h@{config.h}}\index{config.h@{config.h}!FOUR@{FOUR}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a23d7ef5341c6930d19b2ecbb997977cf}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a23d7ef5341c6930d19b2ecbb997977cf}} 
+F\+O\+UR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIVE@{FIVE}!config.h@{config.h}}\index{config.h@{config.h}!FIVE@{FIVE}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a3a40d11d30db182ab8f9846aa9458bec}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a3a40d11d30db182ab8f9846aa9458bec}} 
+F\+I\+VE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SIX@{SIX}!config.h@{config.h}}\index{config.h@{config.h}!SIX@{SIX}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332aadffddd32c3e7497e32cd7e430c9c106}\label{config_8h_abefeac42acb2cd277c8f6484c742e332aadffddd32c3e7497e32cd7e430c9c106}} 
+S\+IX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEVEN@{SEVEN}!config.h@{config.h}}\index{config.h@{config.h}!SEVEN@{SEVEN}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a9a193f3e84352f3fbbe44f8d275a820c}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a9a193f3e84352f3fbbe44f8d275a820c}} 
+S\+E\+V\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EIGHT@{EIGHT}!config.h@{config.h}}\index{config.h@{config.h}!EIGHT@{EIGHT}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a2fd39b67b424f4ea3b4c11ce3195ab8b}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a2fd39b67b424f4ea3b4c11ce3195ab8b}} 
+E\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NINE@{NINE}!config.h@{config.h}}\index{config.h@{config.h}!NINE@{NINE}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332aea09d09b793ccc4a4b5983368d18a4ab}\label{config_8h_abefeac42acb2cd277c8f6484c742e332aea09d09b793ccc4a4b5983368d18a4ab}} 
+N\+I\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEN@{TEN}!config.h@{config.h}}\index{config.h@{config.h}!TEN@{TEN}}}\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332a19e6aa533738c43fc96e8be6560bf1a8}\label{config_8h_abefeac42acb2cd277c8f6484c742e332a19e6aa533738c43fc96e8be6560bf1a8}} 
+T\+EN&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \subsection{Function Documentation}
@@ -283,6 +532,12 @@ Affichage des cartes côté serveur.
 {\em u\+Deck} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a7e6e6f2eab8196a09f094505c2c108e0}\label{config_8h_a7e6e6f2eab8196a09f094505c2c108e0}} 
+\index{config.h@{config.h}!req2str@{req2str}}
+\index{req2str@{req2str}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{req2str()}{req2str()}}
+{\footnotesize\ttfamily char$\ast$ req2str (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}}}]{a }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{config_8h_ae4f3f9ada6d59ea5dec501237ddada3a}\label{config_8h_ae4f3f9ada6d59ea5dec501237ddada3a}} 
 \index{config.h@{config.h}!send\_msg@{send\_msg}}
 \index{send\_msg@{send\_msg}!config.h@{config.h}}
@@ -334,3 +589,24 @@ Mélange du deck initial.
 {\em card} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a8c28944af99e5b9378e12dcfe3e82733}\label{config_8h_a8c28944af99e5b9378e12dcfe3e82733}} 
+\index{config.h@{config.h}!shuffleCard@{shuffleCard}}
+\index{shuffleCard@{shuffleCard}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{shuffleCard()}{shuffleCard()}}
+{\footnotesize\ttfamily void shuffle\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$}]{unocard }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{config_8h_af81353074d2d06b2bd87eb6e83bc3cd4}\label{config_8h_af81353074d2d06b2bd87eb6e83bc3cd4}} 
+\index{config.h@{config.h}!str2req@{str2req}}
+\index{str2req@{str2req}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{str2req()}{str2req()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} str2req (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{config_8h_a45fb41f91440f32013a0bdd2be4fc4dd}\label{config_8h_a45fb41f91440f32013a0bdd2be4fc4dd}} 
+\index{config.h@{config.h}!buffer@{buffer}}
+\index{buffer@{buffer}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char buffer\mbox{[}\mbox{\hyperlink{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}{M\+A\+X\+\_\+\+B\+U\+FF}}\mbox{]}}
+

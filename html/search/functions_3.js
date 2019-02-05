@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inttostr',['intToStr',['../client_8c.html#ae1a5f27a21f91d500645ccb1204d11d1',1,'client.c']]]
+  ['func',['func',['../client_8c.html#a0078db2ef7ee06f6f968e63fd73207b9',1,'func(char *name):&#160;client.c'],['../crash__test_8c.html#a0078db2ef7ee06f6f968e63fd73207b9',1,'func(char *name):&#160;crash_test.c']]]
 ];

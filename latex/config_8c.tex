@@ -17,11 +17,9 @@ void \mbox{\hyperlink{config_8c_a1b072ac8427872e8a98ce851e63c83a6}{send\+\_\+pre
 \begin{DoxyCompactList}\small\item\em Envoie d\textquotesingle{}un requête préparé \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{config_8c_a4a23d5c2a00869e7a0bc8c054971fa63}{shuffle}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$card)
 \begin{DoxyCompactList}\small\item\em Mélange du deck initial. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{config_8c_a7e6e6f2eab8196a09f094505c2c108e0}\label{config_8c_a7e6e6f2eab8196a09f094505c2c108e0}} 
-char $\ast$ {\bfseries req2str} (struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} a)
+char $\ast$ \mbox{\hyperlink{config_8c_a7e6e6f2eab8196a09f094505c2c108e0}{req2str}} (struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} a)
 \item 
-\mbox{\Hypertarget{config_8c_af81353074d2d06b2bd87eb6e83bc3cd4}\label{config_8c_af81353074d2d06b2bd87eb6e83bc3cd4}} 
-struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} {\bfseries str2req} (char $\ast$str)
+struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} \mbox{\hyperlink{config_8c_af81353074d2d06b2bd87eb6e83bc3cd4}{str2req}} (char $\ast$str)
 \end{DoxyCompactItemize}
 
 
@@ -58,6 +56,12 @@ Affichage des cartes côté serveur.
 {\em u\+Deck} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{config_8c_a7e6e6f2eab8196a09f094505c2c108e0}\label{config_8c_a7e6e6f2eab8196a09f094505c2c108e0}} 
+\index{config.c@{config.c}!req2str@{req2str}}
+\index{req2str@{req2str}!config.c@{config.c}}
+\subsubsection{\texorpdfstring{req2str()}{req2str()}}
+{\footnotesize\ttfamily char$\ast$ req2str (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}}}]{a }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{config_8c_ae4f3f9ada6d59ea5dec501237ddada3a}\label{config_8c_ae4f3f9ada6d59ea5dec501237ddada3a}} 
 \index{config.c@{config.c}!send\_msg@{send\_msg}}
 \index{send\_msg@{send\_msg}!config.c@{config.c}}
@@ -109,3 +113,9 @@ Mélange du deck initial.
 {\em card} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{config_8c_af81353074d2d06b2bd87eb6e83bc3cd4}\label{config_8c_af81353074d2d06b2bd87eb6e83bc3cd4}} 
+\index{config.c@{config.c}!str2req@{str2req}}
+\index{str2req@{str2req}!config.c@{config.c}}
+\subsubsection{\texorpdfstring{str2req()}{str2req()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} str2req (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../client_8c.html#a6150e0515f7202e2fb518f7206ed97dc',1,'client.c']]]
+  ['removingcard',['removingcard',['../client_8c.html#a2d57c8812c70160e71fb9b3db9e6d3c1',1,'client.c']]]
 ];

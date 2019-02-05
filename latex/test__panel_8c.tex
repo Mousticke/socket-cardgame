@@ -1,0 +1,86 @@
+\hypertarget{test__panel_8c}{}\section{test\+\_\+panel.\+c File Reference}
+\label{test__panel_8c}\index{test\_panel.c@{test\_panel.c}}
+{\ttfamily \#include $<$panel.\+h$>$}\newline
+{\ttfamily \#include $<$curses.\+h$>$}\newline
+{\ttfamily \#include $<$menu.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___p_a_n_e_l___d_a_t_a}{\+\_\+\+P\+A\+N\+E\+L\+\_\+\+D\+A\+TA}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__panel_8c_a59990369239024c94cbe22080c9d29c3}{N\+L\+I\+N\+ES}}~10
+\item 
+\#define \mbox{\hyperlink{test__panel_8c_aafffdbebac459e968e0f6ac2f50832b3}{N\+C\+O\+LS}}~40
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___p_a_n_e_l___d_a_t_a}{\+\_\+\+P\+A\+N\+E\+L\+\_\+\+D\+A\+TA}} \mbox{\hyperlink{test__panel_8c_a956ea59669694b2ea0a53abc73ca9e5e}{P\+A\+N\+E\+L\+\_\+\+D\+A\+TA}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__panel_8c_aeef9052c2ab188fe65c9cf23ea91192b}{init\+\_\+wins}} (W\+I\+N\+D\+OW $\ast$$\ast$wins, int n)
+\item 
+void \mbox{\hyperlink{test__panel_8c_a34f2c640c9e72af77310ce430e532766}{win\+\_\+show}} (W\+I\+N\+D\+OW $\ast$win, char $\ast$label, int label\+\_\+color)
+\item 
+void \mbox{\hyperlink{test__panel_8c_abcaad1e33b8c930558333576044c2f07}{print\+\_\+in\+\_\+middle}} (W\+I\+N\+D\+OW $\ast$win, int starty, int startx, int width, char $\ast$string, chtype \mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8f}{color}})
+\item 
+int \mbox{\hyperlink{test__panel_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__panel_8c_aafffdbebac459e968e0f6ac2f50832b3}\label{test__panel_8c_aafffdbebac459e968e0f6ac2f50832b3}} 
+\index{test\_panel.c@{test\_panel.c}!NCOLS@{NCOLS}}
+\index{NCOLS@{NCOLS}!test\_panel.c@{test\_panel.c}}
+\subsubsection{\texorpdfstring{NCOLS}{NCOLS}}
+{\footnotesize\ttfamily \#define N\+C\+O\+LS~40}
+
+\mbox{\Hypertarget{test__panel_8c_a59990369239024c94cbe22080c9d29c3}\label{test__panel_8c_a59990369239024c94cbe22080c9d29c3}} 
+\index{test\_panel.c@{test\_panel.c}!NLINES@{NLINES}}
+\index{NLINES@{NLINES}!test\_panel.c@{test\_panel.c}}
+\subsubsection{\texorpdfstring{NLINES}{NLINES}}
+{\footnotesize\ttfamily \#define N\+L\+I\+N\+ES~10}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{test__panel_8c_a956ea59669694b2ea0a53abc73ca9e5e}\label{test__panel_8c_a956ea59669694b2ea0a53abc73ca9e5e}} 
+\index{test\_panel.c@{test\_panel.c}!PANEL\_DATA@{PANEL\_DATA}}
+\index{PANEL\_DATA@{PANEL\_DATA}!test\_panel.c@{test\_panel.c}}
+\subsubsection{\texorpdfstring{PANEL\_DATA}{PANEL\_DATA}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___p_a_n_e_l___d_a_t_a}{\+\_\+\+P\+A\+N\+E\+L\+\_\+\+D\+A\+TA}} \mbox{\hyperlink{test__panel_8c_a956ea59669694b2ea0a53abc73ca9e5e}{P\+A\+N\+E\+L\+\_\+\+D\+A\+TA}}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__panel_8c_aeef9052c2ab188fe65c9cf23ea91192b}\label{test__panel_8c_aeef9052c2ab188fe65c9cf23ea91192b}} 
+\index{test\_panel.c@{test\_panel.c}!init\_wins@{init\_wins}}
+\index{init\_wins@{init\_wins}!test\_panel.c@{test\_panel.c}}
+\subsubsection{\texorpdfstring{init\_wins()}{init\_wins()}}
+{\footnotesize\ttfamily void init\+\_\+wins (\begin{DoxyParamCaption}\item[{W\+I\+N\+D\+OW $\ast$$\ast$}]{wins,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__panel_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__panel_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{test\_panel.c@{test\_panel.c}!main@{main}}
+\index{main@{main}!test\_panel.c@{test\_panel.c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__panel_8c_abcaad1e33b8c930558333576044c2f07}\label{test__panel_8c_abcaad1e33b8c930558333576044c2f07}} 
+\index{test\_panel.c@{test\_panel.c}!print\_in\_middle@{print\_in\_middle}}
+\index{print\_in\_middle@{print\_in\_middle}!test\_panel.c@{test\_panel.c}}
+\subsubsection{\texorpdfstring{print\_in\_middle()}{print\_in\_middle()}}
+{\footnotesize\ttfamily void print\+\_\+in\+\_\+middle (\begin{DoxyParamCaption}\item[{W\+I\+N\+D\+OW $\ast$}]{win,  }\item[{int}]{starty,  }\item[{int}]{startx,  }\item[{int}]{width,  }\item[{char $\ast$}]{string,  }\item[{chtype}]{color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__panel_8c_a34f2c640c9e72af77310ce430e532766}\label{test__panel_8c_a34f2c640c9e72af77310ce430e532766}} 
+\index{test\_panel.c@{test\_panel.c}!win\_show@{win\_show}}
+\index{win\_show@{win\_show}!test\_panel.c@{test\_panel.c}}
+\subsubsection{\texorpdfstring{win\_show()}{win\_show()}}
+{\footnotesize\ttfamily void win\+\_\+show (\begin{DoxyParamCaption}\item[{W\+I\+N\+D\+OW $\ast$}]{win,  }\item[{char $\ast$}]{label,  }\item[{int}]{label\+\_\+color }\end{DoxyParamCaption})}
+
