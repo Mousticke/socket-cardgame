@@ -1,7 +1,7 @@
 /**
  * @file config.h
  * @author Doral - Jbara - Forey
- * @brief 
+ * @brief header cnfig
  * @version 0.1
  * @date 2018-12-22
  * 

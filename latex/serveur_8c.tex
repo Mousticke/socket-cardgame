@@ -1,0 +1,190 @@
+\hypertarget{serveur_8c}{}\section{serveur.\+c File Reference}
+\label{serveur_8c}\index{serveur.c@{serveur.c}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{serveur_8c_a81be438dee731547be81be4ade44c405}{deroute}} (int signal)
+\begin{DoxyCompactList}\small\item\em Fermeture de la socket et arrêt des thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} \mbox{\hyperlink{serveur_8c_aeecd6f58fa6d481195e48a0c33bebbcf}{str\+To\+Uno\+Card}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Conversion de la chaine de caractère en Uno\+Card. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{serveur_8c_ab7cc3806641017bc96af6fd10cabba98}\label{serveur_8c_ab7cc3806641017bc96af6fd10cabba98}} 
+int {\bfseries rand\+\_\+range} (int upper\+\_\+limit)
+\item 
+\mbox{\Hypertarget{serveur_8c_a60de8e2a67fec5a5932b7e3f7f7a0627}\label{serveur_8c_a60de8e2a67fec5a5932b7e3f7f7a0627}} 
+int {\bfseries array\+\_\+contains} (int $\ast$haystack, int needle, int length)
+\item 
+\mbox{\Hypertarget{serveur_8c_aa3d154dae81d33a37f0c2ccd890950a1}\label{serveur_8c_aa3d154dae81d33a37f0c2ccd890950a1}} 
+void {\bfseries deal\+\_\+cards} (int sd)
+\item 
+int \mbox{\hyperlink{serveur_8c_a23270d6ea7fa05081b5dc4be449bbd77}{can\+Play\+Card}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} \mbox{\hyperlink{client_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}})
+\begin{DoxyCompactList}\small\item\em Vérifier si l\textquotesingle{}on peut jouer la carte. La premier carte côté serveur sera considérée comme un joker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{serveur_8c_aae702b3f101ab12da84980b3b567651b}{send\+With\+Ack}} (int $\ast$\mbox{\hyperlink{client_8c_a5903d0b282fc5eae503de618f896b5e1}{sock}}, char $\ast$msg, int usr)
+\begin{DoxyCompactList}\small\item\em Envoie de la requete au client. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{serveur_8c_af2e0f25a2f1bee32f21df6d26445c163}{card2str}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} carte)
+\begin{DoxyCompactList}\small\item\em Conversin de la Uno\+Card en chaine de caractère pour l\textquotesingle{}envoie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{serveur_8c_a7ba70a83e6a08272d59da184f67bfd81}{dialogue\+Clt}} (void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Dialogue avec le client en fonction du code requête passé \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{serveur_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{serveur_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{serveur_8c_a6b57370ba26cec5971678a65db0cf568}\label{serveur_8c_a6b57370ba26cec5971678a65db0cf568}} 
+\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} {\bfseries current\+Card}
+\item 
+\mbox{\Hypertarget{serveur_8c_a650165e8f05540195216ab81804a448b}\label{serveur_8c_a650165e8f05540195216ab81804a448b}} 
+int {\bfseries current\+Player} = -\/1
+\item 
+\mbox{\Hypertarget{serveur_8c_aeeb0efc6f4ac143dbbaf3c58b84fce9c}\label{serveur_8c_aeeb0efc6f4ac143dbbaf3c58b84fce9c}} 
+int {\bfseries nb\+Joueur} = 0
+\item 
+\mbox{\Hypertarget{serveur_8c_ae0d46a978d5cd6707411f276ad869b9c}\label{serveur_8c_ae0d46a978d5cd6707411f276ad869b9c}} 
+pid\+\_\+t {\bfseries pid}
+\item 
+\mbox{\Hypertarget{serveur_8c_a4c81cc379af5987d5bd74b1c38197fcf}\label{serveur_8c_a4c81cc379af5987d5bd74b1c38197fcf}} 
+pid\+\_\+t {\bfseries pidR}
+\item 
+\mbox{\Hypertarget{serveur_8c_a0c38adef1c309a145b4179ce607df167}\label{serveur_8c_a0c38adef1c309a145b4179ce607df167}} 
+int {\bfseries se}
+\item 
+\mbox{\Hypertarget{serveur_8c_a68d02c72d6285728bfbe3d8dfed12414}\label{serveur_8c_a68d02c72d6285728bfbe3d8dfed12414}} 
+pthread\+\_\+t {\bfseries t\+\_\+client} \mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{serveur_8c_a6f2cb7f4b9db61128c18f70c2d63e194}\label{serveur_8c_a6f2cb7f4b9db61128c18f70c2d63e194}} 
+int {\bfseries current\+Thread} = 0
+\item 
+\mbox{\Hypertarget{serveur_8c_af00881b46880e824b8a29472991fc0b0}\label{serveur_8c_af00881b46880e824b8a29472991fc0b0}} 
+char $\ast$ {\bfseries sending}
+\item 
+\mbox{\Hypertarget{serveur_8c_a31fc7cea3b30f228cab84f8cf75ce3a4}\label{serveur_8c_a31fc7cea3b30f228cab84f8cf75ce3a4}} 
+char $\ast$ {\bfseries dealing}
+\item 
+\mbox{\Hypertarget{serveur_8c_a7cdc5011eaecfb78f988ec031f0eaeba}\label{serveur_8c_a7cdc5011eaecfb78f988ec031f0eaeba}} 
+int {\bfseries data\+To\+Int}
+\item 
+\mbox{\Hypertarget{serveur_8c_a0907c0a3783473dc345c0c5151b17acf}\label{serveur_8c_a0907c0a3783473dc345c0c5151b17acf}} 
+\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} {\bfseries deck} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Doral -\/ Jbara -\/ Forey 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2018-\/12-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{serveur_8c_a23270d6ea7fa05081b5dc4be449bbd77}\label{serveur_8c_a23270d6ea7fa05081b5dc4be449bbd77}} 
+\index{serveur.c@{serveur.c}!canPlayCard@{canPlayCard}}
+\index{canPlayCard@{canPlayCard}!serveur.c@{serveur.c}}
+\subsubsection{\texorpdfstring{canPlayCard()}{canPlayCard()}}
+{\footnotesize\ttfamily int can\+Play\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Vérifier si l\textquotesingle{}on peut jouer la carte. La premier carte côté serveur sera considérée comme un joker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serveur_8c_af2e0f25a2f1bee32f21df6d26445c163}\label{serveur_8c_af2e0f25a2f1bee32f21df6d26445c163}} 
+\index{serveur.c@{serveur.c}!card2str@{card2str}}
+\index{card2str@{card2str}!serveur.c@{serveur.c}}
+\subsubsection{\texorpdfstring{card2str()}{card2str()}}
+{\footnotesize\ttfamily char$\ast$ card2str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}}]{carte }\end{DoxyParamCaption})}
+
+
+
+Conversin de la Uno\+Card en chaine de caractère pour l\textquotesingle{}envoie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em carte} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serveur_8c_a81be438dee731547be81be4ade44c405}\label{serveur_8c_a81be438dee731547be81be4ade44c405}} 
+\index{serveur.c@{serveur.c}!deroute@{deroute}}
+\index{deroute@{deroute}!serveur.c@{serveur.c}}
+\subsubsection{\texorpdfstring{deroute()}{deroute()}}
+{\footnotesize\ttfamily void deroute (\begin{DoxyParamCaption}\item[{int}]{signal }\end{DoxyParamCaption})}
+
+
+
+Fermeture de la socket et arrêt des thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{serveur_8c_a7ba70a83e6a08272d59da184f67bfd81}\label{serveur_8c_a7ba70a83e6a08272d59da184f67bfd81}} 
+\index{serveur.c@{serveur.c}!dialogueClt@{dialogueClt}}
+\index{dialogueClt@{dialogueClt}!serveur.c@{serveur.c}}
+\subsubsection{\texorpdfstring{dialogueClt()}{dialogueClt()}}
+{\footnotesize\ttfamily void dialogue\+Clt (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Dialogue avec le client en fonction du code requête passé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{serveur_8c_aae702b3f101ab12da84980b3b567651b}\label{serveur_8c_aae702b3f101ab12da84980b3b567651b}} 
+\index{serveur.c@{serveur.c}!sendWithAck@{sendWithAck}}
+\index{sendWithAck@{sendWithAck}!serveur.c@{serveur.c}}
+\subsubsection{\texorpdfstring{sendWithAck()}{sendWithAck()}}
+{\footnotesize\ttfamily void send\+With\+Ack (\begin{DoxyParamCaption}\item[{int $\ast$}]{sock,  }\item[{char $\ast$}]{msg,  }\item[{int}]{usr }\end{DoxyParamCaption})}
+
+
+
+Envoie de la requete au client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em usr} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{serveur_8c_aeecd6f58fa6d481195e48a0c33bebbcf}\label{serveur_8c_aeecd6f58fa6d481195e48a0c33bebbcf}} 
+\index{serveur.c@{serveur.c}!strToUnoCard@{strToUnoCard}}
+\index{strToUnoCard@{strToUnoCard}!serveur.c@{serveur.c}}
+\subsubsection{\texorpdfstring{strToUnoCard()}{strToUnoCard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} str\+To\+Uno\+Card (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Conversion de la chaine de caractère en Uno\+Card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uno\+Card 
+\end{DoxyReturn}

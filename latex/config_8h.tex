@@ -1,0 +1,336 @@
+\hypertarget{config_8h}{}\section{config.\+h File Reference}
+\label{config_8h}\index{config.h@{config.h}}
+{\ttfamily \#include $<$curses.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$menu.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structunocard}{unocard}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}une carte de uno composé d\textquotesingle{}une face et d\textquotesingle{}une couleur. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}}
+\item 
+struct \mbox{\hyperlink{structarg__struct}{arg\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Définition d\textquotesingle{}une strcture arguments contenant la socket et le numéro de la socket pour les threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{config_8h_ad3fe337408f16c132c895f2b59326410}\label{config_8h_ad3fe337408f16c132c895f2b59326410}} 
+\#define {\bfseries C\+H\+E\+CK}(sts,  msg)~if ((sts) == -\/1) \{perror(msg);exit(-\/1);\}
+\item 
+\mbox{\Hypertarget{config_8h_a04b0e57e7368a2d3e70dc2329c0602f2}\label{config_8h_a04b0e57e7368a2d3e70dc2329c0602f2}} 
+\#define {\bfseries P\+O\+R\+T\+\_\+\+S\+VC}~5000
+\item 
+\mbox{\Hypertarget{config_8h_a4097e5bea5b8c0dcf3b10bdb74b64a44}\label{config_8h_a4097e5bea5b8c0dcf3b10bdb74b64a44}} 
+\#define {\bfseries I\+N\+A\+D\+D\+R\+\_\+\+S\+VC}~\char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a0c719c414608ef14852670b063876c07}\label{config_8h_a0c719c414608ef14852670b063876c07}} 
+\#define {\bfseries M\+SG}~\char`\"{}100\+:Je dis que \textbackslash{}\char`\"{}le fond de l’eau est clair par ici ! Où ça ?\textbackslash{}\char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a3d91eaf9be1bd362e3779b2667768051}\label{config_8h_a3d91eaf9be1bd362e3779b2667768051}} 
+\#define {\bfseries B\+YE}~\char`\"{}000\+:Au revoir et à bientôt ...\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a6437b6cb0ca9277e188b7da5a66056a2}\label{config_8h_a6437b6cb0ca9277e188b7da5a66056a2}} 
+\#define {\bfseries E\+R\+R\+O\+R\+\_\+\+R\+EQ}~\char`\"{}200\+:Requête ou réponse non reconnue !\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_aaef1a8195c12eb99a08eb30a1b83b548}\label{config_8h_aaef1a8195c12eb99a08eb30a1b83b548}} 
+\#define {\bfseries S\+OK}~\char`\"{}OK\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_aa915e8300da7583ca4d3b00103a7575f}\label{config_8h_aa915e8300da7583ca4d3b00103a7575f}} 
+\#define {\bfseries N\+OK}~\char`\"{}Not OK\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}\label{config_8h_a4b70916bdf28ed7afd94e4fb98230a90}} 
+\#define {\bfseries M\+A\+X\+\_\+\+B\+U\+FF}~1024
+\item 
+\mbox{\Hypertarget{config_8h_a022803913146916c632a8d0782cb7dbc}\label{config_8h_a022803913146916c632a8d0782cb7dbc}} 
+\#define {\bfseries N\+B\+\_\+\+C\+A\+R\+T\+ES}~42
+\item 
+\mbox{\Hypertarget{config_8h_a1c346c944e8204fd06dc057393c7c96d}\label{config_8h_a1c346c944e8204fd06dc057393c7c96d}} 
+\#define {\bfseries M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+RS}~3
+\item 
+\mbox{\Hypertarget{config_8h_ad4d025ecf1bdbf8b244ca688df8e478d}\label{config_8h_ad4d025ecf1bdbf8b244ca688df8e478d}} 
+\#define {\bfseries M\+S\+G\+\_\+\+S\+I\+ZE}~82
+\item 
+\mbox{\Hypertarget{config_8h_ad88ad40c57d7ae2f97c12e3fe7827e1f}\label{config_8h_ad88ad40c57d7ae2f97c12e3fe7827e1f}} 
+\#define {\bfseries C\+OK}~\char`\"{}OK\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a1ed5a3b18f21aa4256c84519ced01cb4}\label{config_8h_a1ed5a3b18f21aa4256c84519ced01cb4}} 
+\#define {\bfseries P\+L\+A\+Y\+C\+A\+RD}~\char`\"{}300\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a78dd09631b1c6499c22f21eac4d9c0e4}\label{config_8h_a78dd09631b1c6499c22f21eac4d9c0e4}} 
+\#define {\bfseries P\+R\+I\+N\+T\+C\+A\+RD}~\char`\"{}500\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a8c92b3addd136c31e32ea2e5a4e6de15}\label{config_8h_a8c92b3addd136c31e32ea2e5a4e6de15}} 
+\#define {\bfseries D\+E\+A\+L\+I\+N\+G\+C\+A\+RD}~\char`\"{}700\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a47a39511433a81fcd92e49176a4be518}\label{config_8h_a47a39511433a81fcd92e49176a4be518}} 
+\#define {\bfseries D\+R\+A\+W\+C\+A\+R\+D\+F\+R\+O\+M\+S\+E\+R\+V\+ER}~\char`\"{}800\char`\"{}
+\item 
+\mbox{\Hypertarget{config_8h_a412c778582fa88e4c62776a99930b6e7}\label{config_8h_a412c778582fa88e4c62776a99930b6e7}} 
+\#define {\bfseries K\+E\+Y\+\_\+\+E\+N\+T\+E\+R\+\_\+\+C\+U\+S\+T\+OM}~10
+\item 
+\mbox{\Hypertarget{config_8h_a2b7cf2a3641be7b89138615764d60ba3}\label{config_8h_a2b7cf2a3641be7b89138615764d60ba3}} 
+\#define {\bfseries E\+M\+P\+TY}~\textquotesingle{} \textquotesingle{}
+\item 
+\mbox{\Hypertarget{config_8h_a87b537f5fa5c109d3c05c13d6b18f382}\label{config_8h_a87b537f5fa5c109d3c05c13d6b18f382}} 
+\#define {\bfseries W\+H\+I\+TE}~5
+\item 
+\mbox{\Hypertarget{config_8h_a7b3b25cba33b07c303f3060fe41887f6}\label{config_8h_a7b3b25cba33b07c303f3060fe41887f6}} 
+\#define {\bfseries B\+L\+A\+CK}~6
+\item 
+\mbox{\Hypertarget{config_8h_aef72fe86b7c60b1a86920496456edeac}\label{config_8h_aef72fe86b7c60b1a86920496456edeac}} 
+\#define {\bfseries W\+A\+IT}~0
+\item 
+\mbox{\Hypertarget{config_8h_acc47e9180a9dc8aafbd10fe6cfb8e336}\label{config_8h_acc47e9180a9dc8aafbd10fe6cfb8e336}} 
+\#define {\bfseries R\+E\+F\+U\+SE}~1
+\item 
+\mbox{\Hypertarget{config_8h_a44ad8d0e0924a99b99a5a6a1aa776c33}\label{config_8h_a44ad8d0e0924a99b99a5a6a1aa776c33}} 
+\#define {\bfseries D\+E\+AL}~4
+\item 
+\mbox{\Hypertarget{config_8h_a5e1a9330a996857d164653e4aba8fbfb}\label{config_8h_a5e1a9330a996857d164653e4aba8fbfb}} 
+\#define {\bfseries A\+SK}~5
+\item 
+\mbox{\Hypertarget{config_8h_abf70a4804c459727975816dd16613d45}\label{config_8h_abf70a4804c459727975816dd16613d45}} 
+\#define {\bfseries G\+I\+VE}~7
+\item 
+\mbox{\Hypertarget{config_8h_af144c56be720021d0c3a8075b87ff9b5}\label{config_8h_af144c56be720021d0c3a8075b87ff9b5}} 
+\#define {\bfseries R\+O\+U\+ND}~9
+\item 
+\mbox{\Hypertarget{config_8h_adc5ff46918e62c92962966a7ad4d2876}\label{config_8h_adc5ff46918e62c92962966a7ad4d2876}} 
+\#define {\bfseries S\+C\+O\+R\+ES}~11
+\item 
+\mbox{\Hypertarget{config_8h_a148665c75ac246648923b90119015f88}\label{config_8h_a148665c75ac246648923b90119015f88}} 
+\#define {\bfseries W\+I\+N\+N\+ER}~12
+\item 
+\mbox{\Hypertarget{config_8h_acb08fa4e2bff6fe429d5f0a5e23ec5e4}\label{config_8h_acb08fa4e2bff6fe429d5f0a5e23ec5e4}} 
+\#define {\bfseries M\+U\+L\+T\+I\+P\+L\+E\+\_\+\+C\+O\+L\+OR}~10
+\item 
+\mbox{\Hypertarget{config_8h_a7a703399b5347ebfb53d0507f184f1ff}\label{config_8h_a7a703399b5347ebfb53d0507f184f1ff}} 
+\#define {\bfseries P\+O\+S\+F\+I\+R\+S\+T\+C\+A\+RD}~10
+\item 
+\mbox{\Hypertarget{config_8h_a701f28a9a2b5334b58333f06e27ad91f}\label{config_8h_a701f28a9a2b5334b58333f06e27ad91f}} 
+\#define {\bfseries H\+A\+ND}~11
+\item 
+\mbox{\Hypertarget{config_8h_a25f003de16c08a4888b69f619d70f427}\label{config_8h_a25f003de16c08a4888b69f619d70f427}} 
+\#define {\bfseries A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}(a)~(sizeof(a) / sizeof(a\mbox{[}0\mbox{]}))
+\item 
+\mbox{\Hypertarget{config_8h_a66c7984dbe4ba8f39e6f94fbd0a58a00}\label{config_8h_a66c7984dbe4ba8f39e6f94fbd0a58a00}} 
+\#define {\bfseries C\+T\+R\+LD}~4
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8f}{color}} \mbox{\hyperlink{config_8h_af03b271da9a2fa2b56bab917f69c0808}{Color}}
+\begin{DoxyCompactList}\small\item\em Définir enum color en tant que Color. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332}{face}} \mbox{\hyperlink{config_8h_a80484981734e6c1484093a9f037e79c7}{Face}}
+\begin{DoxyCompactList}\small\item\em Définition de enum face en tant que Face. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structunocard}{unocard}} \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}
+\begin{DoxyCompactList}\small\item\em Définition de la struct unocard en tant que Uno\+Card. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{config_8h_a6d302e4f26f3f380746fece198c1c71a}\label{config_8h_a6d302e4f26f3f380746fece198c1c71a}} 
+typedef struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} {\bfseries t\+\_\+frame}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8f}{color}} \{ \newline
+{\bfseries B\+L\+UE}, 
+{\bfseries Y\+E\+L\+L\+OW}, 
+{\bfseries G\+R\+E\+EN}, 
+{\bfseries R\+ED}, 
+\newline
+{\bfseries J\+O\+K\+ER}
+ \}
+\begin{DoxyCompactList}\small\item\em Définition de la couleur des cartes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332}{face}} \{ \newline
+{\bfseries Z\+E\+RO}, 
+{\bfseries O\+NE}, 
+{\bfseries T\+WO}, 
+{\bfseries T\+H\+R\+EE}, 
+\newline
+{\bfseries F\+O\+UR}, 
+{\bfseries F\+I\+VE}, 
+{\bfseries S\+IX}, 
+{\bfseries S\+E\+V\+EN}, 
+\newline
+{\bfseries E\+I\+G\+HT}, 
+{\bfseries N\+I\+NE}, 
+{\bfseries T\+EN}
+ \}
+\begin{DoxyCompactList}\small\item\em Définition des faces des cartes où T\+EN sera le joker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{config_8h_a9ee88fbe9b9433783cd551f4f080bf96}{print\+Card}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$\mbox{\hyperlink{structunocard}{unocard}})
+\begin{DoxyCompactList}\small\item\em Affichage des cartes côté serveur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{config_8h_a8c28944af99e5b9378e12dcfe3e82733}\label{config_8h_a8c28944af99e5b9378e12dcfe3e82733}} 
+void {\bfseries shuffle\+Card} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$\mbox{\hyperlink{structunocard}{unocard}})
+\item 
+\mbox{\Hypertarget{config_8h_a7e6e6f2eab8196a09f094505c2c108e0}\label{config_8h_a7e6e6f2eab8196a09f094505c2c108e0}} 
+char $\ast$ {\bfseries req2str} (struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} a)
+\item 
+\mbox{\Hypertarget{config_8h_af81353074d2d06b2bd87eb6e83bc3cd4}\label{config_8h_af81353074d2d06b2bd87eb6e83bc3cd4}} 
+struct \mbox{\hyperlink{structt__frame}{t\+\_\+frame}} {\bfseries str2req} (char $\ast$str)
+\item 
+void \mbox{\hyperlink{config_8h_ae4f3f9ada6d59ea5dec501237ddada3a}{send\+\_\+msg}} (int msg\+\_\+code, const char $\ast$payload, int socket)
+\begin{DoxyCompactList}\small\item\em préparation d\textquotesingle{}un envoie d\textquotesingle{}un message du serveur vers le client \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a1b072ac8427872e8a98ce851e63c83a6}{send\+\_\+prepared\+\_\+msg}} (char $\ast$pmsg, int socket)
+\begin{DoxyCompactList}\small\item\em Envoie d\textquotesingle{}un requête préparé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a4a23d5c2a00869e7a0bc8c054971fa63}{shuffle}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$card)
+\begin{DoxyCompactList}\small\item\em Mélange du deck initial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{config_8h_a45fb41f91440f32013a0bdd2be4fc4dd}\label{config_8h_a45fb41f91440f32013a0bdd2be4fc4dd}} 
+char {\bfseries buffer} \mbox{[}M\+A\+X\+\_\+\+B\+U\+FF\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Doral -\/ Jbara -\/ Forey 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2018-\/12-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{config_8h_af03b271da9a2fa2b56bab917f69c0808}\label{config_8h_af03b271da9a2fa2b56bab917f69c0808}} 
+\index{config.h@{config.h}!Color@{Color}}
+\index{Color@{Color}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8f}{color}} \mbox{\hyperlink{config_8h_af03b271da9a2fa2b56bab917f69c0808}{Color}}}
+
+
+
+Définir enum color en tant que Color. 
+
+\mbox{\Hypertarget{config_8h_a80484981734e6c1484093a9f037e79c7}\label{config_8h_a80484981734e6c1484093a9f037e79c7}} 
+\index{config.h@{config.h}!Face@{Face}}
+\index{Face@{Face}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{Face}{Face}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332}{face}} \mbox{\hyperlink{config_8h_a80484981734e6c1484093a9f037e79c7}{Face}}}
+
+
+
+Définition de enum face en tant que Face. 
+
+\mbox{\Hypertarget{config_8h_a28cf69211154da10f35f52548900fb99}\label{config_8h_a28cf69211154da10f35f52548900fb99}} 
+\index{config.h@{config.h}!UnoCard@{UnoCard}}
+\index{UnoCard@{UnoCard}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{UnoCard}{UnoCard}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structunocard}{unocard}} \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}}
+
+
+
+Définition de la struct unocard en tant que Uno\+Card. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{config_8h_a37dbdc30935031c05304482e1be89d8f}\label{config_8h_a37dbdc30935031c05304482e1be89d8f}} 
+\index{config.h@{config.h}!color@{color}}
+\index{color@{color}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{config_8h_a37dbdc30935031c05304482e1be89d8f}{color}}}
+
+
+
+Définition de la couleur des cartes. 
+
+\mbox{\Hypertarget{config_8h_abefeac42acb2cd277c8f6484c742e332}\label{config_8h_abefeac42acb2cd277c8f6484c742e332}} 
+\index{config.h@{config.h}!face@{face}}
+\index{face@{face}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{face}{face}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{config_8h_abefeac42acb2cd277c8f6484c742e332}{face}}}
+
+
+
+Définition des faces des cartes où T\+EN sera le joker. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{config_8h_a9ee88fbe9b9433783cd551f4f080bf96}\label{config_8h_a9ee88fbe9b9433783cd551f4f080bf96}} 
+\index{config.h@{config.h}!printCard@{printCard}}
+\index{printCard@{printCard}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{printCard()}{printCard()}}
+{\footnotesize\ttfamily void print\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$}]{u\+Deck }\end{DoxyParamCaption})}
+
+
+
+Affichage des cartes côté serveur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Deck} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_ae4f3f9ada6d59ea5dec501237ddada3a}\label{config_8h_ae4f3f9ada6d59ea5dec501237ddada3a}} 
+\index{config.h@{config.h}!send\_msg@{send\_msg}}
+\index{send\_msg@{send\_msg}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{send\_msg()}{send\_msg()}}
+{\footnotesize\ttfamily void send\+\_\+msg (\begin{DoxyParamCaption}\item[{int}]{msg\+\_\+code,  }\item[{const char $\ast$}]{payload,  }\item[{int}]{socket }\end{DoxyParamCaption})}
+
+
+
+préparation d\textquotesingle{}un envoie d\textquotesingle{}un message du serveur vers le client 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg\+\_\+code} & \\
+\hline
+{\em payload} & \\
+\hline
+{\em socket} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a1b072ac8427872e8a98ce851e63c83a6}\label{config_8h_a1b072ac8427872e8a98ce851e63c83a6}} 
+\index{config.h@{config.h}!send\_prepared\_msg@{send\_prepared\_msg}}
+\index{send\_prepared\_msg@{send\_prepared\_msg}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{send\_prepared\_msg()}{send\_prepared\_msg()}}
+{\footnotesize\ttfamily void send\+\_\+prepared\+\_\+msg (\begin{DoxyParamCaption}\item[{char $\ast$}]{pmsg,  }\item[{int}]{socket }\end{DoxyParamCaption})}
+
+
+
+Envoie d\textquotesingle{}un requête préparé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & \\
+\hline
+{\em socket} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a4a23d5c2a00869e7a0bc8c054971fa63}\label{config_8h_a4a23d5c2a00869e7a0bc8c054971fa63}} 
+\index{config.h@{config.h}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!config.h@{config.h}}
+\subsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily void shuffle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$}]{card }\end{DoxyParamCaption})}
+
+
+
+Mélange du deck initial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & \\
+\hline
+\end{DoxyParams}

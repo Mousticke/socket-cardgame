@@ -1,0 +1,461 @@
+\hypertarget{client_8c}{}\section{client.\+c File Reference}
+\label{client_8c}\index{client.c@{client.c}}
+
+
+fichier client  
+
+
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{client_8c_a49540e53493673c111c26d55fdce7038}{choose\+Role}} (int socket, int role)
+\begin{DoxyCompactList}\small\item\em Choisir le rôle en tant que client spectateur ou joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{client_8c_a0ed23698ce4faef972d50abb011cd6f5}{draw\+\_\+card}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} carte, int normal)
+\begin{DoxyCompactList}\small\item\em Dessiner la carte posée en jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{client_8c_a9e77c86f4608a7be1a2962f8fd32fce0}{draw\+\_\+game\+\_\+card}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} carte, int no\+Carte)
+\begin{DoxyCompactList}\small\item\em Dessiner les cartes en main. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{client_8c_ab16bc519bfc8442b3ee629d3c6bff381}{connect\+Sock}} ()
+\begin{DoxyCompactList}\small\item\em Création de la socket client. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{client_8c_a1a82d5913d085c18f05bc2be6f013e63}{send\+With\+Ack}} (int socket, char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Requete d\textquotesingle{}envoie au serveur. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{client_8c_aac4d2a4a126bc6355946df3b83583fbb}{card2str}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} carte)
+\begin{DoxyCompactList}\small\item\em Conversion de la Uno\+Card en chaine de caractère. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{client_8c_ae1a5f27a21f91d500645ccb1204d11d1}{int\+To\+Str}} (int entier)
+\begin{DoxyCompactList}\small\item\em Conversion d\textquotesingle{}un entier en chaine de caractère. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{client_8c_a0078db2ef7ee06f6f968e63fd73207b9}{func}} (char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Vérification de l\textquotesingle{}item sélectionné dans le menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} \mbox{\hyperlink{client_8c_aeecd6f58fa6d481195e48a0c33bebbcf}{str\+To\+Uno\+Card}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Convertir une chaine de caratère en Uno\+Card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{client_8c_a10a44e6c14c7535641c5c4e6ce05ca4d}{send\+With\+Ack\+Simple}} (int socket, char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Requete pour un envoie avec un accusé de réception du serveur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{client_8c_a81b38f3d40086e1bf233b771f2f32e11}{send\+For\+Cards}} (int socket, char $\ast$msg, int index)
+\begin{DoxyCompactList}\small\item\em Envoi de la requete au serveur pour avoir les cartes au début de la partie. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{client_8c_a7b22ab8c261481014b2b5776ca2c4b66}{setchoice}} (int \mbox{\hyperlink{client_8c_a30df446d01f80e4211b2fcef8f754436}{ch}})
+\begin{DoxyCompactList}\small\item\em Choisir une carte dans la main, piocher une carte, quitter. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{client_8c_a22f4771d789bed578eb43b7a393cebdb}{listener}} ()
+\begin{DoxyCompactList}\small\item\em Executer des requêtes en fonction des événements arrivants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{client_8c_abf9e6b7e6f15df4b525a2e7705ba3089}\label{client_8c_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+int {\bfseries main} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{client_8c_a93106a8ab1c1bbc0431c08a8ad58a520}{remove\+\_\+element}} (\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$array, int index, int array\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Supprimer un élément dans le tableau Uno\+Card du joueur une fois la carte posée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} \mbox{\hyperlink{client_8c_a14e439bdb1842dc332958586691f4a4b}{hand\+Game}} \mbox{[}42\mbox{]}
+\item 
+int \mbox{\hyperlink{client_8c_ad580a639598b8ed8259ed79ac7b81de7}{addition}}
+\item 
+\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} \mbox{\hyperlink{client_8c_acdef5af5ed6fe655c3d9952e9b680138}{uno\+Card\+From\+Server}} = \{-\/1, -\/1\}
+\item 
+\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} \mbox{\hyperlink{client_8c_a1e568219aaec3afffb2959dab0ca8336}{uno\+Card\+From\+Server\+Posed}} = \{-\/1, -\/1\}
+\item 
+char $\ast$ \mbox{\hyperlink{client_8c_a7105986d4c8db2ce6bda2087f0652283}{menu}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Menu utilisé pour l\textquotesingle{}action de tirer une carte ou de quitter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{client_8c_a0a2f84ed7838f07779ae24c5a9086d33}\label{client_8c_a0a2f84ed7838f07779ae24c5a9086d33}} 
+int {\bfseries y}
+\item 
+int \mbox{\hyperlink{client_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}}
+\item 
+int \mbox{\hyperlink{client_8c_a30df446d01f80e4211b2fcef8f754436}{ch}}
+\item 
+char $\ast$ \mbox{\hyperlink{client_8c_a5a270ab4e9852d44cee9879187469a51}{temp}}
+\item 
+char $\ast$ \mbox{\hyperlink{client_8c_a2d57c8812c70160e71fb9b3db9e6d3c1}{removingcard}}
+\item 
+int \mbox{\hyperlink{client_8c_a5992b274cfdcacdbc1fa8347fd01ebde}{done}} = 0
+\item 
+I\+T\+EM $\ast$$\ast$ \mbox{\hyperlink{client_8c_abd20148218105ee74cfdddb0cbcd952b}{my\+\_\+items}}
+\item 
+int \mbox{\hyperlink{client_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}}
+\item 
+M\+E\+NU $\ast$ \mbox{\hyperlink{client_8c_ae6f024d17a03ff5e9ca41769b11fdfca}{my\+\_\+menu}}
+\item 
+\mbox{\Hypertarget{client_8c_a478e7a7801776ac24cd223b7e08bee25}\label{client_8c_a478e7a7801776ac24cd223b7e08bee25}} 
+int {\bfseries n\+\_\+choices}
+\item 
+\mbox{\Hypertarget{client_8c_a5d6ab5431cdbe58dadc4eea5c83ad6b3}\label{client_8c_a5d6ab5431cdbe58dadc4eea5c83ad6b3}} 
+int {\bfseries iterator}
+\item 
+\mbox{\Hypertarget{client_8c_ab12a0f52448c71aad1b4445c3ecb7cb2}\label{client_8c_ab12a0f52448c71aad1b4445c3ecb7cb2}} 
+I\+T\+EM $\ast$ {\bfseries cur\+\_\+item}
+\item 
+\mbox{\Hypertarget{client_8c_a69b7176d6f241061322b2262f5130c93}\label{client_8c_a69b7176d6f241061322b2262f5130c93}} 
+pthread\+\_\+mutex\+\_\+t {\bfseries mutexsum} = P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER
+\item 
+int \mbox{\hyperlink{client_8c_a5903d0b282fc5eae503de618f896b5e1}{sock}}
+\item 
+int \mbox{\hyperlink{client_8c_abaed6c669444862ca693b55ef064dc6f}{current\+\_\+hand\+\_\+to\+\_\+stash}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+fichier client 
+
+\begin{DoxyAuthor}{Author}
+Doral -\/ Jbara -\/ Forey 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2018-\/12-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{client_8c_aac4d2a4a126bc6355946df3b83583fbb}\label{client_8c_aac4d2a4a126bc6355946df3b83583fbb}} 
+\index{client.c@{client.c}!card2str@{card2str}}
+\index{card2str@{card2str}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{card2str()}{card2str()}}
+{\footnotesize\ttfamily char $\ast$ card2str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}}]{carte }\end{DoxyParamCaption})}
+
+
+
+Conversion de la Uno\+Card en chaine de caractère. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em carte} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_a49540e53493673c111c26d55fdce7038}\label{client_8c_a49540e53493673c111c26d55fdce7038}} 
+\index{client.c@{client.c}!chooseRole@{chooseRole}}
+\index{chooseRole@{chooseRole}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{chooseRole()}{chooseRole()}}
+{\footnotesize\ttfamily void choose\+Role (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{role }\end{DoxyParamCaption})}
+
+
+
+Choisir le rôle en tant que client spectateur ou joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \\
+\hline
+{\em role} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_8c_ab16bc519bfc8442b3ee629d3c6bff381}\label{client_8c_ab16bc519bfc8442b3ee629d3c6bff381}} 
+\index{client.c@{client.c}!connectSock@{connectSock}}
+\index{connectSock@{connectSock}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{connectSock()}{connectSock()}}
+{\footnotesize\ttfamily int connect\+Sock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Création de la socket client. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_a0ed23698ce4faef972d50abb011cd6f5}\label{client_8c_a0ed23698ce4faef972d50abb011cd6f5}} 
+\index{client.c@{client.c}!draw\_card@{draw\_card}}
+\index{draw\_card@{draw\_card}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{draw\_card()}{draw\_card()}}
+{\footnotesize\ttfamily void draw\+\_\+card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}}]{carte,  }\item[{int}]{normal }\end{DoxyParamCaption})}
+
+
+
+Dessiner la carte posée en jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em carte} & \\
+\hline
+{\em normal} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_8c_a9e77c86f4608a7be1a2962f8fd32fce0}\label{client_8c_a9e77c86f4608a7be1a2962f8fd32fce0}} 
+\index{client.c@{client.c}!draw\_game\_card@{draw\_game\_card}}
+\index{draw\_game\_card@{draw\_game\_card}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{draw\_game\_card()}{draw\_game\_card()}}
+{\footnotesize\ttfamily void draw\+\_\+game\+\_\+card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}}}]{carte,  }\item[{int}]{no\+Carte }\end{DoxyParamCaption})}
+
+
+
+Dessiner les cartes en main. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em carte} & \\
+\hline
+{\em no\+Carte} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_8c_a0078db2ef7ee06f6f968e63fd73207b9}\label{client_8c_a0078db2ef7ee06f6f968e63fd73207b9}} 
+\index{client.c@{client.c}!func@{func}}
+\index{func@{func}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{func()}{func()}}
+{\footnotesize\ttfamily void func (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Vérification de l\textquotesingle{}item sélectionné dans le menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_8c_ae1a5f27a21f91d500645ccb1204d11d1}\label{client_8c_ae1a5f27a21f91d500645ccb1204d11d1}} 
+\index{client.c@{client.c}!intToStr@{intToStr}}
+\index{intToStr@{intToStr}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{intToStr()}{intToStr()}}
+{\footnotesize\ttfamily char $\ast$ int\+To\+Str (\begin{DoxyParamCaption}\item[{int}]{entier }\end{DoxyParamCaption})}
+
+
+
+Conversion d\textquotesingle{}un entier en chaine de caractère. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_a22f4771d789bed578eb43b7a393cebdb}\label{client_8c_a22f4771d789bed578eb43b7a393cebdb}} 
+\index{client.c@{client.c}!listener@{listener}}
+\index{listener@{listener}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{listener()}{listener()}}
+{\footnotesize\ttfamily void $\ast$ listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executer des requêtes en fonction des événements arrivants. 
+
+\begin{DoxyReturn}{Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_a93106a8ab1c1bbc0431c08a8ad58a520}\label{client_8c_a93106a8ab1c1bbc0431c08a8ad58a520}} 
+\index{client.c@{client.c}!remove\_element@{remove\_element}}
+\index{remove\_element@{remove\_element}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{remove\_element()}{remove\_element()}}
+{\footnotesize\ttfamily void remove\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{array\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Supprimer un élément dans le tableau Uno\+Card du joueur une fois la carte posée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em index} & \\
+\hline
+{\em array\+\_\+length} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_8c_a81b38f3d40086e1bf233b771f2f32e11}\label{client_8c_a81b38f3d40086e1bf233b771f2f32e11}} 
+\index{client.c@{client.c}!sendForCards@{sendForCards}}
+\index{sendForCards@{sendForCards}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{sendForCards()}{sendForCards()}}
+{\footnotesize\ttfamily int send\+For\+Cards (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{char $\ast$}]{msg,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Envoi de la requete au serveur pour avoir les cartes au début de la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \\
+\hline
+{\em msg} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_a1a82d5913d085c18f05bc2be6f013e63}\label{client_8c_a1a82d5913d085c18f05bc2be6f013e63}} 
+\index{client.c@{client.c}!sendWithAck@{sendWithAck}}
+\index{sendWithAck@{sendWithAck}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{sendWithAck()}{sendWithAck()}}
+{\footnotesize\ttfamily int send\+With\+Ack (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Requete d\textquotesingle{}envoie au serveur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \\
+\hline
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_a10a44e6c14c7535641c5c4e6ce05ca4d}\label{client_8c_a10a44e6c14c7535641c5c4e6ce05ca4d}} 
+\index{client.c@{client.c}!sendWithAckSimple@{sendWithAckSimple}}
+\index{sendWithAckSimple@{sendWithAckSimple}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{sendWithAckSimple()}{sendWithAckSimple()}}
+{\footnotesize\ttfamily int send\+With\+Ack\+Simple (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Requete pour un envoie avec un accusé de réception du serveur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \\
+\hline
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_a7b22ab8c261481014b2b5776ca2c4b66}\label{client_8c_a7b22ab8c261481014b2b5776ca2c4b66}} 
+\index{client.c@{client.c}!setchoice@{setchoice}}
+\index{setchoice@{setchoice}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{setchoice()}{setchoice()}}
+{\footnotesize\ttfamily void $\ast$ setchoice (\begin{DoxyParamCaption}\item[{int}]{ch }\end{DoxyParamCaption})}
+
+
+
+Choisir une carte dans la main, piocher une carte, quitter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{client_8c_aeecd6f58fa6d481195e48a0c33bebbcf}\label{client_8c_aeecd6f58fa6d481195e48a0c33bebbcf}} 
+\index{client.c@{client.c}!strToUnoCard@{strToUnoCard}}
+\index{strToUnoCard@{strToUnoCard}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{strToUnoCard()}{strToUnoCard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} str\+To\+Uno\+Card (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Convertir une chaine de caratère en Uno\+Card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uno\+Card 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{client_8c_ad580a639598b8ed8259ed79ac7b81de7}\label{client_8c_ad580a639598b8ed8259ed79ac7b81de7}} 
+\index{client.c@{client.c}!addition@{addition}}
+\index{addition@{addition}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{addition}{addition}}
+{\footnotesize\ttfamily int addition}
+
+Variable utilisé contenant le nombre de carte en plus que la main initiale (11 cartes au début) \mbox{\Hypertarget{client_8c_a4e1e0e72dd773439e333c84dd762a9c3}\label{client_8c_a4e1e0e72dd773439e333c84dd762a9c3}} 
+\index{client.c@{client.c}!c@{c}}
+\index{c@{c}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int c}
+
+choix dans le menu \mbox{\Hypertarget{client_8c_a30df446d01f80e4211b2fcef8f754436}\label{client_8c_a30df446d01f80e4211b2fcef8f754436}} 
+\index{client.c@{client.c}!ch@{ch}}
+\index{ch@{ch}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{ch}{ch}}
+{\footnotesize\ttfamily int ch}
+
+recupération de caractère tapé \mbox{\Hypertarget{client_8c_abaed6c669444862ca693b55ef064dc6f}\label{client_8c_abaed6c669444862ca693b55ef064dc6f}} 
+\index{client.c@{client.c}!current\_hand\_to\_stash@{current\_hand\_to\_stash}}
+\index{current\_hand\_to\_stash@{current\_hand\_to\_stash}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{current\_hand\_to\_stash}{current\_hand\_to\_stash}}
+{\footnotesize\ttfamily int current\+\_\+hand\+\_\+to\+\_\+stash = 0}
+
+savoir combien de carte on a en main \mbox{\Hypertarget{client_8c_a5992b274cfdcacdbc1fa8347fd01ebde}\label{client_8c_a5992b274cfdcacdbc1fa8347fd01ebde}} 
+\index{client.c@{client.c}!done@{done}}
+\index{done@{done}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily int done = 0}
+
+Variable utilisé pour savoir si on arrête les threads \mbox{\Hypertarget{client_8c_a14e439bdb1842dc332958586691f4a4b}\label{client_8c_a14e439bdb1842dc332958586691f4a4b}} 
+\index{client.c@{client.c}!handGame@{handGame}}
+\index{handGame@{handGame}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{handGame}{handGame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} hand\+Game\mbox{[}42\mbox{]}}
+
+Carte en main pour le joueur \mbox{\Hypertarget{client_8c_a7105986d4c8db2ce6bda2087f0652283}\label{client_8c_a7105986d4c8db2ce6bda2087f0652283}} 
+\index{client.c@{client.c}!menu@{menu}}
+\index{menu@{menu}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily char$\ast$ menu\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \textcolor{stringliteral}{"Tirer une carte"},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"Quitter"},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Menu utilisé pour l\textquotesingle{}action de tirer une carte ou de quitter. 
+
+\mbox{\Hypertarget{client_8c_abd20148218105ee74cfdddb0cbcd952b}\label{client_8c_abd20148218105ee74cfdddb0cbcd952b}} 
+\index{client.c@{client.c}!my\_items@{my\_items}}
+\index{my\_items@{my\_items}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{my\_items}{my\_items}}
+{\footnotesize\ttfamily I\+T\+EM$\ast$$\ast$ my\+\_\+items}
+
+Item du menu \+: voir menu.\+h \mbox{\Hypertarget{client_8c_ae6f024d17a03ff5e9ca41769b11fdfca}\label{client_8c_ae6f024d17a03ff5e9ca41769b11fdfca}} 
+\index{client.c@{client.c}!my\_menu@{my\_menu}}
+\index{my\_menu@{my\_menu}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{my\_menu}{my\_menu}}
+{\footnotesize\ttfamily M\+E\+NU$\ast$ my\+\_\+menu}
+
+Varibale de menu \mbox{\Hypertarget{client_8c_a2d57c8812c70160e71fb9b3db9e6d3c1}\label{client_8c_a2d57c8812c70160e71fb9b3db9e6d3c1}} 
+\index{client.c@{client.c}!removingcard@{removingcard}}
+\index{removingcard@{removingcard}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{removingcard}{removingcard}}
+{\footnotesize\ttfamily char$\ast$ removingcard}
+
+chaine de caractère pour l\textquotesingle{}envoie de la requete \mbox{\Hypertarget{client_8c_a5903d0b282fc5eae503de618f896b5e1}\label{client_8c_a5903d0b282fc5eae503de618f896b5e1}} 
+\index{client.c@{client.c}!sock@{sock}}
+\index{sock@{sock}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{sock}{sock}}
+{\footnotesize\ttfamily int sock}
+
+socket client \mbox{\Hypertarget{client_8c_a5a270ab4e9852d44cee9879187469a51}\label{client_8c_a5a270ab4e9852d44cee9879187469a51}} 
+\index{client.c@{client.c}!temp@{temp}}
+\index{temp@{temp}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily char$\ast$ temp}
+
+chaine de caractère pour l\textquotesingle{}envoie de la requete \mbox{\Hypertarget{client_8c_acdef5af5ed6fe655c3d9952e9b680138}\label{client_8c_acdef5af5ed6fe655c3d9952e9b680138}} 
+\index{client.c@{client.c}!unoCardFromServer@{unoCardFromServer}}
+\index{unoCardFromServer@{unoCardFromServer}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{unoCardFromServer}{unoCardFromServer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} uno\+Card\+From\+Server = \{-\/1, -\/1\}}
+
+Récupéré la carte donnée par le serveur \mbox{\Hypertarget{client_8c_a1e568219aaec3afffb2959dab0ca8336}\label{client_8c_a1e568219aaec3afffb2959dab0ca8336}} 
+\index{client.c@{client.c}!unoCardFromServerPosed@{unoCardFromServerPosed}}
+\index{unoCardFromServerPosed@{unoCardFromServerPosed}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{unoCardFromServerPosed}{unoCardFromServerPosed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a28cf69211154da10f35f52548900fb99}{Uno\+Card}} uno\+Card\+From\+Server\+Posed = \{-\/1, -\/1\}}
+
+Récupéré la carte posé sur le paquet nécessaire lorsque l\textquotesingle{}on va faire un refresh \mbox{\Hypertarget{client_8c_a6150e0515f7202e2fb518f7206ed97dc}\label{client_8c_a6150e0515f7202e2fb518f7206ed97dc}} 
+\index{client.c@{client.c}!x@{x}}
+\index{x@{x}!client.c@{client.c}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int x}
+
+Ligne et colonne de la fenêtre 
