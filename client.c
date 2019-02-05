@@ -1,3 +1,14 @@
+/**
+ * @file client.c
+ * @author Doral - Jbara - Forey
+ * @brief fichier client
+ * @version 0.1
+ * @date 2018-12-22
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
+
 #include "config.h"
 
 
@@ -6,6 +17,10 @@ int addition;
 UnoCard unoCardFromServer = {-1, -1};
 UnoCard unoCardFromServerPosed = {-1, -1};
 
+/**
+ * @brief Menu utilisé pour l'action de tirer une carte ou de quitter
+ * 
+ */
 char *menu[] = {
 	"Tirer une carte",
 	"Quitter",
@@ -146,6 +161,12 @@ int main(int argc, char const *argv[]){
     exit(0);
 }
 
+/**
+ * @brief Choisir une carte dans la main, piocher une carte, quitter
+ * 
+ * @param ch 
+ * @return void* 
+ */
 void * setchoice (int ch)
 {
 	do {
@@ -248,6 +269,12 @@ void * setchoice (int ch)
     while ((ch != 'a') && (ch != 'A'));
 }
 
+
+/**
+ * @brief Executer des requêtes en fonction des événements arrivants
+ * 
+ * @return void* 
+ */
 void * listener ()
 {
     int bufsize=1024;
@@ -341,6 +368,14 @@ void * listener ()
 	}
 }
 
+/**
+ * @brief Envoi de la requete au serveur pour avoir les cartes au début de la partie
+ * 
+ * @param socket 
+ * @param msg 
+ * @param index 
+ * @return int 
+ */
 int sendForCards(int socket, char * msg, int index)
 {
 	CHECK(write(socket, msg, strlen(msg)+1), "Can't send"); 
@@ -363,6 +398,13 @@ int sendForCards(int socket, char * msg, int index)
 	}
 }
 
+/**
+ * @brief Requete pour un envoie avec un accusé de réception du serveur
+ * 
+ * @param socket 
+ * @param msg 
+ * @return int 
+ */
 int sendWithAckSimple(int socket, char * msg){
 	char reponse[255];
 	CHECK(write(socket, msg, strlen(msg)+1), "Can't send"); 
@@ -371,12 +413,25 @@ int sendWithAckSimple(int socket, char * msg){
 	else return 0;
 }
 
+/**
+ * @brief Convertir une chaine de caratère en UnoCard
+ * 
+ * @param str 
+ * @return UnoCard 
+ */
 UnoCard strToUnoCard(char *str)
 {
     UnoCard tempuno = {str[0] - 48,str[2] - 48};
 	return tempuno;
 }
 
+/**
+ * @brief Requete d'envoie au serveur
+ * 
+ * @param socket 
+ * @param msg 
+ * @return int 
+ */
 int sendWithAck(int socket, char * msg){
 	char requete[MAX_BUFF];
 	char data[MAX_BUFF];
@@ -384,6 +439,11 @@ int sendWithAck(int socket, char * msg){
 	return 1;
 }
 
+/**
+ * @brief Création de la socket client
+ * 
+ * @return int 
+ */
 int connectSock(){
 	int socket_client;
 	struct sockaddr_in svc,clt; 
@@ -404,6 +464,12 @@ int connectSock(){
 	return socket_client;
 }
 
+/**
+ * @brief Choisir le rôle en tant que client spectateur ou joueur
+ * 
+ * @param socket 
+ * @param role 
+ */
 void chooseRole(int socket,int role){
 	switch(role){
 		case 0:
@@ -415,6 +481,12 @@ void chooseRole(int socket,int role){
 	}
 }
 
+/**
+ * @brief Dessiner les cartes en main
+ * 
+ * @param carte 
+ * @param noCarte 
+ */
 void draw_game_card(UnoCard carte, int noCarte){
 	if(carte.uc_face == 10){
 		attron(COLOR_PAIR(RED));
@@ -440,7 +512,12 @@ void draw_game_card(UnoCard carte, int noCarte){
 	refresh();
 }
 
-
+/**
+ * @brief Dessiner la carte posée en jeu
+ * 
+ * @param carte 
+ * @param normal 
+ */
 void draw_card(UnoCard carte,int normal){
 	Color color = carte.uc_color;
 	Face number = carte.uc_face;
@@ -563,6 +640,12 @@ void draw_card(UnoCard carte,int normal){
 }
 
 
+/**
+ * @brief Conversion de la UnoCard en chaine de caractère
+ * 
+ * @param carte 
+ * @return char* 
+ */
 char* card2str(UnoCard carte){
 	char* temp2;
 	temp2=malloc(3);
@@ -574,6 +657,12 @@ char* card2str(UnoCard carte){
 	return temp2;
 }
 
+/**
+ * @brief Conversion d'un entier en chaine de caractère
+ * 
+ * @param entier 
+ * @return char* 
+ */
 char* intToStr(int entier)
 {
 	char* temp2;
@@ -582,12 +671,24 @@ char* intToStr(int entier)
 	return temp2;
 }
 
+/**
+ * @brief Vérification de l'item sélectionné dans le menu
+ * 
+ * @param name 
+ */
 void func(char *name)
 {	move(20, 0);
 	clrtoeol();
 	mvprintw(20, 0, "Item selectionné : %s", name);
 }	
 
+/**
+ * @brief Supprimer un élément dans le tableau UnoCard du joueur une fois la carte posée
+ * 
+ * @param array 
+ * @param index 
+ * @param array_length 
+ */
 void remove_element(UnoCard *array, int index, int array_length)
 {
    int i;

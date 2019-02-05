@@ -1,3 +1,14 @@
+/**
+ * @file serveur.c
+ * @author Doral - Jbara - Forey
+ * @brief 
+ * @version 0.1
+ * @date 2018-12-22
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
+
 #include "config.h"
 
 //card currentCard;
@@ -56,6 +67,11 @@ UnoCard deck[] = {
 	{TEN, JOKER}
 };
 
+/**
+ * @brief Fermeture de la socket et arrêt des thread
+ * 
+ * @param signal 
+ */
 void deroute (int signal){
 	int status;
 	switch (signal){
@@ -70,7 +86,7 @@ void deroute (int signal){
 			break;
 		case SIGINT:
 			//il faut fermer les sd
-			for (int i = 0; i < 2; i++){
+			for (int i = 0; i < currentThread; i++){
 				pthread_join (t_client[i], NULL);
 			}
 			printf("%s\n", "closing se");
@@ -80,6 +96,12 @@ void deroute (int signal){
 	}
 }
 
+/**
+ * @brief Conversion de la chaine de caractère en UnoCard
+ * 
+ * @param str 
+ * @return UnoCard 
+ */
 UnoCard strToUnoCard(char *str)
 {
     UnoCard temp = {str[0] - 48,str[2] - 48};
@@ -129,6 +151,12 @@ void deal_cards(int sd) {
 	}
 }
 
+/**
+ * @brief Vérifier si l'on peut jouer la carte. La premier carte côté serveur sera considérée comme un joker.
+ * 
+ * @param c 
+ * @return int 
+ */
 int canPlayCard(UnoCard c){
 	if(c.uc_face == currentCard.uc_face || 
     c.uc_color == currentCard.uc_color || 
@@ -145,12 +173,25 @@ int canPlayCard(UnoCard c){
 	return 0;
 }
 
+/**
+ * @brief Envoie de la requete au client
+ * 
+ * @param sock 
+ * @param msg 
+ * @param usr 
+ */
 void sendWithAck(int* sock, char * msg, int usr){
 	char reponse[255];
 	CHECK(write(sock[usr], msg, strlen(msg)+1), "Can't send"); 
 	
 }
 
+/**
+ * @brief Conversin de la UnoCard en chaine de caractère pour l'envoie
+ * 
+ * @param carte 
+ * @return char* 
+ */
 char* card2str(UnoCard carte){
 	char* temp2;
 	temp2=malloc(3);
@@ -162,6 +203,11 @@ char* card2str(UnoCard carte){
 	return temp2;
 }
 
+/**
+ * @brief Dialogue avec le client en fonction du code requête passé
+ * 
+ * @param param 
+ */
 void dialogueClt (void* param) { 
 	struct arg_struct *args = param;
 	//int sd = (int *) param;

@@ -1,7 +1,21 @@
+/**
+ * @file config.c
+ * @author Doral - Jbara - Forey
+ * @brief fichier config
+ * @version 0.1
+ * @date 2018-12-22
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #include "config.h"
 
 
-
+/**
+ * @brief Affichage des cartes côté serveur
+ * 
+ * @param uDeck 
+ */
 void printCard(UnoCard * uDeck)
 {
     char* color;
@@ -34,12 +48,25 @@ void printCard(UnoCard * uDeck)
 	}
 }
 
+/**
+ * @brief préparation d'un envoie d'un message du serveur vers le client
+ * 
+ * @param msg_code 
+ * @param payload 
+ * @param socket 
+ */
 void send_msg(int msg_code, const char* payload, int socket) {
 	char msg[MSG_SIZE];
 	sprintf(msg, "%d %s", msg_code, payload);
 	send_prepared_msg(msg, socket);
 }
 
+/**
+ * @brief Envoie d'un requête préparé
+ * 
+ * @param pmsg 
+ * @param socket 
+ */
 void send_prepared_msg(char* pmsg, int socket) {
 	if (send(socket, pmsg, MSG_SIZE, 0) == -1) {
 		perror("Failed to send a mesesage to the serveur");
@@ -47,20 +74,12 @@ void send_prepared_msg(char* pmsg, int socket) {
 	}
 }
 
-/*void shuffleCard(UnoCard * unocard)
-{
-    UnoCard tmp;
-	int x,y, t=0;
-	for(x = 42; x> 0; x--)
-	{
-		y = rand() % x;
-		tmp = unocard[x];
-		unocard[x] = unocard[y];
-		unocard[y] = tmp;
-	}
-}*/
 
-
+/**
+ * @brief Mélange du deck initial
+ * 
+ * @param card 
+ */
 void shuffle(UnoCard* card)
 {
     int i;
@@ -75,7 +94,6 @@ void shuffle(UnoCard* card)
 		card[r] = tmp;
     }
 }
-
 
 char* req2str(struct t_frame a){
 	char* temp;

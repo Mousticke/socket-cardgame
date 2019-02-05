@@ -1,3 +1,14 @@
+/**
+ * @file config.h
+ * @author Doral - Jbara - Forey
+ * @brief 
+ * @version 0.1
+ * @date 2018-12-22
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
+
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -61,26 +72,49 @@
 char buffer[MAX_BUFF]; 
 
 
-//Deifinir la couleur des cartes
+/**
+ * @brief Définition de la couleur des cartes
+ * 
+ */
 enum color
 {
 	BLUE, YELLOW, GREEN, RED, JOKER
 };
+
+/**
+ * @brief Définir enum color en tant que Color
+ * 
+ */
 typedef enum color Color;
 
-//Définir la face des cartes
+/**
+ * @brief Définition des faces des cartes où TEN sera le joker
+ * 
+ */
 enum face
 {
 	ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN
 };
+
+/**
+ * @brief Définition de enum face en tant que Face
+ * 
+ */
 typedef enum face Face;
 
-//Structure d'une carte de uno
+/**
+ * @brief Structure d'une carte de uno composé d'une face et d'une couleur
+ * 
+ */
 struct unocard
 {
 	Face uc_face;
 	Color uc_color;
 };
+/**
+ * @brief Définition de la struct unocard en tant que UnoCard
+ * 
+ */
 typedef struct unocard UnoCard;
 
 typedef struct t_frame{
@@ -88,6 +122,10 @@ typedef struct t_frame{
 	char msg[20];
 }t_frame;
 
+/**
+ * @brief Définition d'une strcture arguments contenant la socket et le numéro de la socket pour les threads
+ * 
+ */
 struct arg_struct {
     int arg1[3];
     int arg2;
