@@ -22,6 +22,7 @@ int currentThread = 0;
 char* sending;
 char* dealing;
 int dataToInt;
+int next = 0;
 UnoCard deck[] = {
 	{ZERO,GREEN},
 	{ONE,GREEN},
@@ -110,47 +111,6 @@ UnoCard strToUnoCard(char *str)
 
 
 
-int rand_range(int upper_limit) {
-	return (int) (( (double) upper_limit / RAND_MAX) * rand());
-}
-
-int array_contains(int* haystack, int needle, int length) {
-	int* array_ptr = haystack;
-	for (; (array_ptr - haystack) < length; array_ptr++) {
-		if (*array_ptr == needle) {
-			return 1;
-		}
-	}
-	return 0;
-}
-
-void deal_cards(int sd) {
-	int cards_per_player = NB_CARTES / nbJoueur;
-	int dealt_cards[cards_per_player * nbJoueur];
-	int total_dealt_cards = 0;
-	int player;
-	for (player = 0; player < nbJoueur; player++) {
-		int card;
-		int str_length = 0;
-		char msg[3* cards_per_player]; //2 caractèress par carte + 1 espace
-		msg[0] = '\0';
-		for (card = 0; card < cards_per_player; card++) {
-			int random_card;
-			do {
-				random_card = rand_range(NB_CARTES);
-				//choisir une carte tant qu'on n'en trouve pas une qui n'a pas encore été choisie
-			} while (array_contains(dealt_cards, random_card, total_dealt_cards));
-			//rajouter la carte au message
-			str_length += sprintf(msg+str_length, "%d ", random_card);
-			dealt_cards[total_dealt_cards++] = random_card;
-		}
-		//distribuer les cartes choisies au joueur
-		send_msg(DEAL, msg, sd);
-		printf("cards distribué : \n");
-		printf("%s\n", msg);
-	}
-}
-
 /**
  * @brief Vérifier si l'on peut jouer la carte. La premier carte côté serveur sera considérée comme un joker.
  * 
@@ -224,7 +184,9 @@ void dialogueClt (void* param) {
 		printf("%s\n", buffer);
 		sscanf(buffer, "%[^:]:%[^:]:%s",requete, buffer,data);
 		printf("DATA : %s\n", data);
-		dataToInt = atoi(data)+((usr)*11);
+		if(atoi(buffer) == atoi("201"))
+			next++;
+		dataToInt = atoi(data)+((currentThread)*11)+next;
 		printf("DATA TO INT %d\n", dataToInt);
 		switch(atoi(requete)) { //atoi convertit la chaine de charactère en entier
 			case 600:

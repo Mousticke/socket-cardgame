@@ -220,7 +220,7 @@ void * setchoice (int ch)
     		sprintf(str, "%d", current_hand_to_stash);
         	strcpy(temp, "600");
         	strcat(temp,":");
-        	strcat(temp,"20");
+        	strcat(temp,"201");
         	strcat(temp,":");
         	strcat(temp, str);
 			current_hand_to_stash++;
