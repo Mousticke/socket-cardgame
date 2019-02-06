@@ -184,46 +184,57 @@ void dialogueClt (void* param) {
 		printf("%s\n", buffer);
 		sscanf(buffer, "%[^:]:%[^:]:%s",requete, buffer,data);
 		printf("DATA : %s\n", data);
-		if(atoi(buffer) == atoi("201"))
+		if(atoi(buffer) == atoi("201")){
 			next++;
-		dataToInt = atoi(data)+((currentThread)*11)+next;
+			dataToInt = atoi(data)+((currentThread+1)*11)+next;
+		}else{
+			dataToInt = atoi(data)+((usr)*11);
+		}
+		
 		printf("DATA TO INT %d\n", dataToInt);
 		switch(atoi(requete)) { //atoi convertit la chaine de charactère en entier
 			case 600:
-				dealing = malloc(100);
-				strcpy(dealing, DEALINGCARD);
-				strcat(dealing,":");
-				strcat(dealing,"20");
-				strcat(dealing,":");
-				strcat(dealing, card2str(deck[dataToInt]));
-				sendWithAck(sd, dealing, usr);
-				char* color;
-				int face; 
-				switch (deck[dataToInt].uc_color)
+				if(dataToInt > 42)
 				{
-					case 0:
-						color = "Bleu";
-						face = deck[dataToInt].uc_face;
-						break;
-					case 1:
-						color = "Jaune";
-						face = deck[dataToInt].uc_face;
-						break;
-					case 2:
-						color = "Vert";
-						face = deck[dataToInt].uc_face;
-						break;
-					case 3:
-						color = "Rouge";
-						face = deck[dataToInt].uc_face;
-						break;
-					case 4:
-						color = "Joker";
-						face = -1;
-						break;										
+					printf("NOT OK. Plus de carte disponible\n");
+					write(sd[usr], NOK, strlen(NOK)+1);
+				}else
+				{
+					dealing = malloc(100);
+					strcpy(dealing, DEALINGCARD);
+					strcat(dealing,":");
+					strcat(dealing,"20");
+					strcat(dealing,":");
+					strcat(dealing, card2str(deck[dataToInt]));
+					sendWithAck(sd, dealing, usr);
+					char* color;
+					int face; 
+					switch (deck[dataToInt].uc_color)
+					{
+						case 0:
+							color = "Bleu";
+							face = deck[dataToInt].uc_face;
+							break;
+						case 1:
+							color = "Jaune";
+							face = deck[dataToInt].uc_face;
+							break;
+						case 2:
+							color = "Vert";
+							face = deck[dataToInt].uc_face;
+							break;
+						case 3:
+							color = "Rouge";
+							face = deck[dataToInt].uc_face;
+							break;
+						case 4:
+							color = "Joker";
+							face = -1;
+							break;										
+					}
+					printf("\n --------------------- Card [%d - %s] Sent to %d\n -------------------", face, color, sd[usr]);
+					free(dealing);
 				}
-				printf("\n --------------------- Card [%d - %s] Sent to %d\n -------------------", face, color, sd[usr]);
-				free(dealing);
 				break;
 			case 0 : 
 				write(sd[usr], BYE, strlen(BYE)+1); 
