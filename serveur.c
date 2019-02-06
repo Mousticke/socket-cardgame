@@ -186,7 +186,8 @@ void dialogueClt (void* param) {
 		printf("DATA : %s\n", data);
 		if(atoi(buffer) == atoi("201")){
 			next++;
-			dataToInt = atoi(data)+((currentThread)*11)+next;
+			//dataToInt = atoi(data)+((currentThread)*11)+next;
+			dataToInt = atoi(data)*(2)+next;
 		}else{
 			dataToInt = atoi(data)+((usr)*11);
 		}
