@@ -185,9 +185,7 @@ void dialogueClt (void* param) {
 		sscanf(buffer, "%[^:]:%[^:]:%s",requete, buffer,data);
 		printf("DATA : %s\n", data);
 		if(atoi(buffer) == atoi("201")){
-			next++;
-			//dataToInt = atoi(data)+((currentThread)*11)+next;
-			dataToInt = dataToInt+next;
+			dataToInt = dataToInt+1;
 		}else{
 			dataToInt = atoi(data)+((usr)*11);
 		}
