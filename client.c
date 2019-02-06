@@ -333,8 +333,8 @@ void * listener ()
 				mvprintw(LINES-5 ,0 ,requete);
 				mvprintw(LINES-4 ,0 ,data);
 				unoCardFromServer = strToUnoCard(data);
-				addition++;
-				handGame[HAND+addition] = unoCardFromServer;
+				addition=addition+1;
+				handGame[HAND++] = unoCardFromServer;
 				clear();
 				n_choices = ARRAY_SIZE(menu);
 				my_items = (ITEM **)calloc(n_choices + 1, sizeof(ITEM *));
@@ -347,7 +347,8 @@ void * listener ()
 				my_items[n_choices] = (ITEM *)NULL;
 				/* Create menu */
 				my_menu = new_menu((ITEM **)my_items);
-				for(int i = 0; i < HAND+addition; i++)
+				int over = HAND + 1;
+				for(int i = 0; i < over; i++)
 				{
 					draw_game_card(handGame[i],i);
 				}
