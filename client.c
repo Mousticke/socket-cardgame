@@ -13,7 +13,7 @@
 
 
 UnoCard handGame[42];  /*!< Carte en main pour le joueur */
-int addition; /*!< Variable utilisé contenant le nombre de carte en plus que la main initiale (11 cartes au début) */
+int addition=0; /*!< Variable utilisé contenant le nombre de carte en plus que la main initiale (11 cartes au début) */
 UnoCard unoCardFromServer = {-1, -1}; /*!< Récupéré la carte donnée par le serveur */
 UnoCard unoCardFromServerPosed = {-1, -1}; /*!< Récupéré la carte posé sur le paquet nécessaire lorsque l'on va faire un refresh */
 
